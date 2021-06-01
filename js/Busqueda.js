@@ -1,0 +1,106 @@
+class Busqueda {
+
+   constructor(
+   ) {
+      //API key's para realizar peticiones a la API
+      this.apiKey = 'trify0tI94PynofAobCVFUjWCBY5bn6E',
+         //Search endpoint
+         this.url_search = 'api.giphy.com/v1/gifs/search',
+         //Trending endpoint
+         this.url_trending = 'api.giphy.com/v1/gifs/trending',
+         //Upload endpoint
+         this.url_upload = 'upload.giphy.com/v1/gifs',
+         //Search suggestions
+         this.url_related = 'api.giphy.com/v1/gifs/search/tags',
+         //Trending Terms
+         this.url_trending_terms = 'api.giphy.com/v1/trending/searches',
+         //Search GIF url based on GIF id
+         this.url_based_id = 'api.giphy.com/v1/gifs'
+         //Offset para el boton ver más
+         this.offset = 0;
+   }
+
+
+   //Obtiene los resultados a partir de un término de busqueda
+   async wordSearch(search, offset = 0, cantidadGIFS = 12) {
+
+      //Se realiza la petición a la API /search
+      try {
+         const resultados = await fetch(
+            'https://' + this.url_search +
+            '?q=' + search +
+            '&api_key=' + this.apiKey +
+            '&limit=' + cantidadGIFS +
+            '&offset=' + offset);
+
+         const arrayBusqueda = await resultados.json();
+         console.log("wordsearch: ",arrayBusqueda);
+         this.offset += cantidadGIFS;
+         
+         return arrayBusqueda;
+
+      } catch (error) {
+         console.log(error)
+      }
+   }
+
+   //Obtiene los GIFS que están en trending
+   async trendingGifs() {
+
+      try {
+         const resultadosTrending = await fetch(
+            'https://' + this.url_trending +
+            '?&api_key=' + this.apiKey +
+            '&limit=' + '10');
+
+         const arrayTrending = await resultadosTrending.json();
+         console.log("Trending gifs:", arrayTrending);
+         return arrayTrending;
+
+      } catch (error) {
+         console.log(error)
+      }
+   }
+
+   //Obtiene los trending terms
+   async trendingTerms() {
+
+      try {
+         let trendingRespuesta = await fetch(
+            'https://' + this.url_trending_terms +
+            '?&api_key=' + this.apiKey);
+
+         let arrayTrendingTerms = await trendingRespuesta.json();
+         console.log("Trending terms: ", arrayTrendingTerms);
+         return arrayTrendingTerms;
+
+      } catch (error) {
+         console.log(error)
+      }
+
+   }
+
+   //Obtiene los terminos sugeridos mientras se escribe
+   async wordSuggestion(word) {
+
+      try {
+         const sugerenciasRespuesta = await fetch(
+            'https://' + this.url_related + 
+            '?q=' + word + 
+            '&api_key=' + this.apiKey + 
+            '&limit=4')
+         const arraySugerencias = await sugerenciasRespuesta.json();
+
+         console.log("Sugerencias: ", arraySugerencias);
+         return arraySugerencias;
+
+
+      } catch (error) {
+         console.log(error);
+      }
+
+
+   }
+
+
+}
