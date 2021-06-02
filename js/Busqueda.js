@@ -101,5 +101,10 @@ class Busqueda {
 
    }
 
+   async downloadGIF(id){
+      let data = await fetch(`https://media2.giphy.com/media/${id}/giphy.gif?${this.apiKey}&rid=giphy.gif`);
+
+      return data;
+   }
 
 }

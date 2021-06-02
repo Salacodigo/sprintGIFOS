@@ -1,14 +1,12 @@
 
-
-
-//Clase que realiza peticiones a la API
+//Instancia de la clase que realiza peticiones a la API
 let funcionesBusqueda = new Busqueda();
 
 //Busca las palabras en trending
 async function buscarTrendingTerms(){
    
    let dataJSON = await funcionesBusqueda.trendingTerms();
-   
+
    //Limpia el arreglo
    BDtrendingTerms = [];
    
@@ -31,7 +29,6 @@ async function buscarTrendingGifs() {
          gif.title, //title
          gif.images.preview_webp.url, //preview_url
          gif.url, //gif_url
-         'search', //category
          false //statusFavorite
       );
 
@@ -56,7 +53,6 @@ async function buscarGifs(word) {
             gif.title, //title
             gif.images.preview_webp.url, //preview_url
             gif.url, //gif_url
-            'search', //category
             false //statusFavorite
          );
 
@@ -65,7 +61,6 @@ async function buscarGifs(word) {
       });
    }
 }
-
 
 //Busca las palabras relacionadas
 async function buscarSugerencias(word){

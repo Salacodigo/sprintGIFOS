@@ -7,7 +7,6 @@ class GIF {
       title = String,
       preview_url = String,
       gif_url = String,
-      category = [], //search, trend, create
       statusFavorite = Boolean,
    
    ) {
@@ -16,7 +15,6 @@ class GIF {
       this.title = title;
       this.preview_url = preview_url;
       this.gif_url = gif_url;
-      this.category = category;
       this.statusFavorite = statusFavorite;
    }
 
@@ -39,10 +37,6 @@ class GIF {
 
    get gifLong_url() {
       return this.gif_url;
-   }
-
-   get gifCategory() {
-      return this.category;
    }
 
    get status() {
@@ -71,34 +65,8 @@ class GIF {
       this.gif_url = gifLong_url;
    }
 
-   addCategory(gifCategory) {
-      this.category.push(gifCategory);
-   }
-
-   deleteCategory(gifCategory) {
-      let nuevo = this.category.filter(cat => {
-         return cat !== gifCategory;
-      });
-
-      this.category = nuevo;
-   }
-
    changeStatusFavorite() {
       this.statusFavorite = !this.statusFavorite;
-   }
-
-
-   printGIFInfo() {
-      let gif = {
-         id: this.id,
-         user: this.user,
-         title: this.title,
-         preview_url: this.preview_url,
-         gif_url: this.gif_url,
-         category: this.category,
-         statusFavorite: this.statusFavorite
-      }
-      console.log(gif);
    }
 
 

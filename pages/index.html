@@ -11,20 +11,57 @@
 </head>
 
 <body>
+   <h2>Menu</h2>
+   <ul>
+      <li><a href="../pages/index.html">Home</a></li>
+      <li><a href="../pages/favorites.html">Favoritos</a></li>
+   </ul>
+
+   <h2>GIF Maximizado</h2>
+   <div class="maximize-container" id="maximize-container">
+      <div class="maximized-gif-card">
+         <img class="gifImage" 
+               id="maximized-gifImage" 
+               src="">
+         <div class="hoverGif">
+            <div class="gifButtonContainer">
+               <img class="favoriteBtn" 
+                     id="maximizedFavoriteBtn" 
+                     data-id="" 
+                     src="../assets/icon-fav.svg"
+                     alt="favorite button">
+               <img class="downloadBtn" 
+                     id="maximizedDownloadBtn" 
+                     data-id="uk4Va5MkRp2bfkOk6f" 
+                     src="../assets/icon-download.svg"
+                     alt="download GIF button">
+               <img class="closeBtn" 
+                     id="closeMaximizedGifBtn" 
+                     src="../assets/close.svg"
+                     alt="close maximized GIF button">
+            </div>
+            <div class="gifInformation">
+               <p class="gifUser" id="maximizedGifUser" >mariannaraskin</p>
+               <p class="gifTitle" id="maximizedGifTitle">Good Night Stars GIF by Marianna</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
    <h1>Buscador GIFS</h1>
    <section class="search-section">
 
       <input type="text" placeholder="Busque un termino" value="Gol" id="input-search">
       <button id="btn-search">Buscar</button>
       <ul class="sugerencias-container" id="sugerencias-container">
-         
       </ul>
    </section>
 
    <!-- gifs trending -->
    <h2>Terms trending</h2>
    <div class="terms-container" id="terms-resultados">
-      
+
    </div>
 
 
@@ -38,10 +75,11 @@
          <img class="expandBtn" src="../assets/icon-max-normal.svg" alt="expand GIF button"> -->
       </div>
    </div>
+   <button id="btn-VerMas">Ver mas</button>
 
    <!-- GIFS trending -->
    <h2>Gifs trending</h2>
-   <div >
+   <div>
       <div class="gif-container" id="carrousel">
 
       </div>
@@ -51,10 +89,16 @@
    <script src="../js/Busqueda.js"></script>
    <script src="../js/storage.js"></script>
    <script src="../js/dibuja.js"></script>
-   <script src="../js/index.js"></script>
+   <script src="../js/maximizeGIF.js"></script>
+   <script src="../js/statusFavorite.js"></script>
+   <script src="../js/downloadGif.js"></script>
+
+   <script src="../js/homeBuscar.js"></script>
+   <script src="../js/homeConstantes.js"></script>
+   <script src="../js/homeEventListeners.js"></script>
 
    <!-- UI scripts -->
-   <script src="../js/homeUI.js"></script>
+   <script src="../js/homeFuncionalidad.js"></script>
 
 </body>
 

@@ -1,12 +1,10 @@
 
 //Arreglos como BD
 let DBgifsBuscados = [];
-let BDgifsFavoritos = [];
 let BDtrendingGifs = [];
+let BDgifsFavoritos = [];
 let BDtrendingTerms = [];
 let BDcreatedGifs = [];
-
-
 
 
 //Funciones para Local Storage
