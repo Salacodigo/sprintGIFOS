@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,20 +9,28 @@
    <link rel="shortcut icon" href="../assets/logo-mobile.svg" />
    <link rel="stylesheet" href="../styles/css/home.css">
 </head>
+
 <body>
    <h1>Buscador GIFS</h1>
-   
-   <input type="text" placeholder="Busque un termino" value="Gol" id="input-search">
-   <button id="btn-search">Buscar</button>
+   <section class="search-section">
+
+      <input type="text" placeholder="Busque un termino" value="Gol" id="input-search">
+      <button id="btn-search">Buscar</button>
+      <ul class="sugerencias-container" id="sugerencias-container">
+         
+      </ul>
+   </section>
 
    <!-- gifs trending -->
-   <h2>Gifs trending</h2>
-   <ul id="trending">
+   <h2>Terms trending</h2>
+   <div class="terms-container" id="terms-resultados">
+      
+   </div>
 
-   </ul>
+
    <!-- Busqueda -->
    <h2>Gifs buscados</h2>
-   <div  id="cont-resultados">
+   <div id="cont-resultados">
       <div class="gif-container" id="buscados">
          <!-- <img class="favoriteBtn" src="../assets/icon-fav.svg"
          alt="favorite button"> 
@@ -32,11 +41,15 @@
 
    <!-- GIFS trending -->
    <h2>Gifs trending</h2>
+   <div >
+      <div class="gif-container" id="carrousel">
 
+      </div>
+   </div>
 
    <script src="../js/GIF.js"></script>
    <script src="../js/Busqueda.js"></script>
-   <script src="../js/storage.js"></script> 
+   <script src="../js/storage.js"></script>
    <script src="../js/dibuja.js"></script>
    <script src="../js/index.js"></script>
 
@@ -44,4 +57,5 @@
    <script src="../js/homeUI.js"></script>
 
 </body>
+
 </html>

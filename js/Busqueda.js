@@ -34,7 +34,7 @@ class Busqueda {
             '&offset=' + offset);
 
          const arrayBusqueda = await resultados.json();
-         console.log("wordsearch: ",arrayBusqueda);
+         
          this.offset += cantidadGIFS;
          
          return arrayBusqueda;
@@ -54,7 +54,7 @@ class Busqueda {
             '&limit=' + '10');
 
          const arrayTrending = await resultadosTrending.json();
-         console.log("Trending gifs:", arrayTrending);
+         
          return arrayTrending;
 
       } catch (error) {
@@ -71,7 +71,7 @@ class Busqueda {
             '?&api_key=' + this.apiKey);
 
          let arrayTrendingTerms = await trendingRespuesta.json();
-         console.log("Trending terms: ", arrayTrendingTerms);
+         
          return arrayTrendingTerms;
 
       } catch (error) {
@@ -91,7 +91,6 @@ class Busqueda {
             '&limit=4')
          const arraySugerencias = await sugerenciasRespuesta.json();
 
-         console.log("Sugerencias: ", arraySugerencias);
          return arraySugerencias;
 
 
