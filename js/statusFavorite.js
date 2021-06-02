@@ -1,7 +1,7 @@
 function addFavorite(id){
    
    //Agrega a favoritos
-   let gifPorAgregar = gifInformation(id, true);
+   let gifPorAgregar = gifInformation(id);
 
    //Verifica si ya es un GIF Favorito
    let esFavorito = BDgifsFavoritos.includes(gifPorAgregar);
@@ -14,37 +14,9 @@ function addFavorite(id){
          return gif.gifId !== gifPorAgregar.gifId;
       });
    }
-   
+
+   //Dibuja los favoritos
+   limpiarContenedor(containerFavorites);
+   dibujaGifCards(BDgifsFavoritos, containerFavorites);
    guardarLocalStorage('BDgifsFavoritos', BDgifsFavoritos);
-}
-
-
-function temporal (){
-   console.log(id);
-   BDgifsFavoritos.push(id);
-   console.log('BDgifsFavoritosB',BDgifsFavoritos);
-
-   let DBgifsFavoritosActualizada = []
-   
-
-   let exit = false;
-   let gifInfo = {};
-   do {
-      gifInfo = DBgifsBuscados.filter(gif => gif.gifId === id);
-      if (gifInfo.length > 0) { exit = true; break }
-      
-      gifInfo = BDtrendingGifs.filter(gif => gif.gifId === id);
-      if (gifInfo.length > 0) { exit = true; break }
-      
-      gifInfo = BDgifsFavoritos.filter(gif => gif.gifId === id);
-      if (gifInfo.length > 0) { exit = true; break }
-      
-      gifInfo = BDcreatedGifs.filter(gif => gif.gifId === id);
-      if (gifInfo.length > 0) { exit = true; break }
-
-   } while (!exit)
-
-   if( gifInfo.length > 0 ){ 
-      return gifInfo[0];
-   }
 }

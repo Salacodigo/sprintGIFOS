@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Favorites</title>
    <link rel="shortcut icon" href="../assets/logo-mobile.svg" />
-   <link rel="stylesheet" href="../styles/css/home.css">
+   <link rel="stylesheet" href="../styles/css/favorites.css">
 </head>
 
 <body>
@@ -15,10 +15,44 @@
    <li><a href="../pages/index.html">Home</a></li>
    <li><a href="../pages/favorites.html">Favoritos</a></li>
 
+
+
+   <h2>GIF Maximizado</h2>
+   <div class="maximize-container" id="maximize-container">
+      <div class="maximized-gif-card">
+         <img class="gifImage" 
+               id="maximized-gifImage" 
+               src="">
+         <div class="hoverGif">
+            <div class="gifButtonContainer">
+               <img class="favoriteBtn" 
+                     id="maximizedFavoriteBtn" 
+                     data-id="" 
+                     src="../assets/icon-fav.svg"
+                     alt="favorite button">
+               <img class="downloadBtn" 
+                     id="maximizedDownloadBtn" 
+                     data-id="" 
+                     src="../assets/icon-download.svg"
+                     alt="download GIF button">
+               <img class="closeBtn" 
+                     id="closeMaximizedGifBtn" 
+                     src="../assets/close.svg"
+                     alt="close maximized GIF button">
+            </div>
+            <div class="gifInformation">
+               <p class="gifUser" id="maximizedGifUser" >mariannaraskin</p>
+               <p class="gifTitle" id="maximizedGifTitle">Good Night Stars GIF by Marianna</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
    <!-- Favoritos -->
    <h2>Gifs Favoritos</h2>
    <div id="cont-resultados">
-      <div class="gif-container" id="buscados">
+      <div class="gif-container" id="favoritos">
          <!-- <img class="favoriteBtn" src="../assets/icon-fav.svg"
             alt="favorite button"> 
             <img class="downloadBtn" src="../assets/icon-download.svg" alt="download GIF button">
@@ -28,14 +62,34 @@
    <button id="btn-VerMas">Ver mas</button>
 
 
-   <!-- <script src="../js/GIF.js"></script> -->
-   <!-- <script src="../js/Busqueda.js"></script> -->
+   <!-- GIFS trending -->
+   <h2>Gifs trending</h2>
+   <div>
+      <div class="gif-container" id="carrousel">
+
+      </div>
+   </div>
+
+
+
+   <script src="../js/GIF.js"></script>
+   <script src="../js/Busqueda.js"></script>
    <script src="../js/storage.js"></script>
-   <script src="../js/dibuja.js"></script>/
-   <!-- <script src="../js/index.js"></script> -->
+   <script src="../js/dibuja.js"></script>
+
+   <script src="../js/maximizeGIF.js"></script>
+   <script src="../js/statusFavorite.js"></script>
+   <script src="../js/downloadGif.js"></script>
+
+   <script src="../js/homeBuscar.js"></script>
+   <script src="../js/homeConstantes.js"></script>
+   <script src="../js/homeEventListeners.js"></script>
+   
+   <script src="../js/favoritesConstantes.js"></script>
+   <script src="../js/favoritesEventListeners.js"></script>
 
    <!-- UI scripts -->
-   <script src="../js/favoriteUI.js"></script>
+   <script src="../js/favoritesFuncionalidad.js"></script>
 
 
 

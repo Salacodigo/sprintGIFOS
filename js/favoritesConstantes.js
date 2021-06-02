@@ -1,0 +1,1 @@
+let containerFavorites = document.getElementById('favoritos');

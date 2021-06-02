@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  text-decoration: none;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.maximize-container {
+  display: none;
+}
+.maximize-container .maximized-gif-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid red;
+  position: relative;
+}
+.maximize-container .maximized-gif-card .gifImage {
+  width: 100%;
+  height: 100%;
+}
+.maximize-container .maximized-gif-card .hoverGif {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 100%;
+  height: 100%;
+}
+.maximize-container .maximized-gif-card .hoverGif .gifButtonContainer {
+  padding: 10px;
+}
+.maximize-container .maximized-gif-card .hoverGif .gifButtonContainer .favoriteBtn {
+  cursor: pointer;
+}
+.maximize-container .maximized-gif-card .hoverGif .gifButtonContainer .downloadBtn {
+  cursor: pointer;
+}
+.maximize-container .maximized-gif-card .hoverGif .gifButtonContainer .expandBtn {
+  cursor: pointer;
+}
+.maximize-container .maximized-gif-card .hoverGif .gifInformation {
+  color: #572EE5;
+}
+.maximize-container .maximized-gif-card .hoverGif .gifInformation .gifUser {
+  font-family: "Montserrat";
+  padding: 10px;
+}
+.maximize-container .maximized-gif-card .hoverGif .gifInformation .gifTitle {
+  font-family: "Montserrat";
+  padding: 10px;
+}
+
+.gif-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(150px, 200px);
+  justify-content: center;
+}
+.gif-container .gif-card {
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+  position: relative;
+}
+.gif-container .gif-card .gifImage {
+  width: 100%;
+  height: 100%;
+}
+.gif-container .gif-card .hoverGif {
+  position: absolute;
+  background-color: rgba(87, 46, 229, 0.7);
+  width: 100%;
+  height: 100%;
+}
+.gif-container .gif-card .hoverGif .gifButtonContainer {
+  padding: 10px;
+}
+.gif-container .gif-card .hoverGif .gifButtonContainer .favoriteBtn {
+  cursor: pointer;
+}
+.gif-container .gif-card .hoverGif .gifButtonContainer .downloadBtn {
+  cursor: pointer;
+}
+.gif-container .gif-card .hoverGif .gifButtonContainer .expandBtn {
+  cursor: pointer;
+}
+.gif-container .gif-card .hoverGif .gifInformation .gifUser {
+  font-family: "Montserrat";
+  color: #FFFFFF;
+  padding: 10px;
+}
+.gif-container .gif-card .hoverGif .gifInformation .gifTitle {
+  font-family: "Montserrat";
+  color: #FFFFFF;
+  padding: 10px;
+}
+
+.gif-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(150px, 200px);
+  justify-content: center;
+}
+.gif-container .gif-card {
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+  position: relative;
+}
+.gif-container .gif-card .gifImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.gif-container .gif-card .hoverGif {
+  position: absolute;
+  background-color: rgba(87, 46, 229, 0.7);
+  width: 100%;
+  height: 100%;
+}
+.gif-container .gif-card .hoverGif .gifButton {
+  padding: 10px;
+}
+.gif-container .gif-card .hoverGif .gifButton .favoriteBtn {
+  cursor: pointer;
+}
+.gif-container .gif-card .hoverGif .gifButton .downloadBtn {
+  cursor: pointer;
+}
+.gif-container .gif-card .hoverGif .gifButton .expandBtn {
+  cursor: pointer;
+}
+.gif-container .gif-card .hoverGif .gifInformation .gifUser {
+  font-family: "Montserrat";
+  color: #FFFFFF;
+  padding: 10px;
+}
+.gif-container .gif-card .hoverGif .gifInformation .gifTitle {
+  font-family: "Montserrat";
+  color: #FFFFFF;
+  padding: 10px;
+}
+
+/*# sourceMappingURL=favorites.css.map */
