@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 * {
   text-decoration: none;
   margin: 0;
@@ -5,11 +15,47 @@
   padding: 0;
 }
 
+.search-section {
+  margin: 20px 0px;
+}
+.search-section #input-search {
+  width: 80%;
+  margin: 0px 10px;
+  outline: none;
+  border: 2px solid red;
+  font-family: "Montserrat";
+  font-size: 25px;
+}
+.search-section #btn-search {
+  cursor: pointer;
+}
+.search-section .sugerencias-container {
+  display: none;
+}
+.search-section .sugerencias-container .suggestion {
+  width: 80%;
+  font-family: "Montserrat";
+  font-size: 25px;
+  margin: 0px 10px;
+  border: 2px solid red;
+  cursor: pointer;
+}
+
+.terms-container {
+  margin: 20px;
+}
+.terms-container .trending-term {
+  font-family: "Montserrat";
+  margin: 5px;
+  color: #572EE5;
+  cursor: pointer;
+}
+
 .gif-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
-  grid-auto-rows: minmax(100px, auto);
+  grid-auto-rows: minmax(150px, 200px);
   justify-content: center;
 }
 .gif-container .gif-card {
@@ -27,6 +73,75 @@
   background-color: rgba(87, 46, 229, 0.7);
   width: 100%;
   height: 100%;
+}
+.gif-container .gif-card .hoverGif .gifButton {
+  padding: 10px;
+}
+.gif-container .gif-card .hoverGif .gifButton .favoriteBtn {
+  cursor: pointer;
+}
+.gif-container .gif-card .hoverGif .gifButton .downloadBtn {
+  cursor: pointer;
+}
+.gif-container .gif-card .hoverGif .gifButton .expandBtn {
+  cursor: pointer;
+}
+.gif-container .gif-card .hoverGif .gifInformation .gifUser {
+  font-family: "Montserrat";
+  color: #FFFFFF;
+  padding: 10px;
+}
+.gif-container .gif-card .hoverGif .gifInformation .gifTitle {
+  font-family: "Montserrat";
+  color: #FFFFFF;
+  padding: 10px;
+}
+
+.gif-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  grid-auto-rows: minmax(150px, 200px);
+  justify-content: center;
+}
+.gif-container .gif-card {
+  display: flex;
+  justify-content: center;
+  border: 2px solid red;
+  position: relative;
+}
+.gif-container .gif-card .gifImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.gif-container .gif-card .hoverGif {
+  position: absolute;
+  background-color: rgba(87, 46, 229, 0.7);
+  width: 100%;
+  height: 100%;
+}
+.gif-container .gif-card .hoverGif .gifButton {
+  padding: 10px;
+}
+.gif-container .gif-card .hoverGif .gifButton .favoriteBtn {
+  cursor: pointer;
+}
+.gif-container .gif-card .hoverGif .gifButton .downloadBtn {
+  cursor: pointer;
+}
+.gif-container .gif-card .hoverGif .gifButton .expandBtn {
+  cursor: pointer;
+}
+.gif-container .gif-card .hoverGif .gifInformation .gifUser {
+  font-family: "Montserrat";
+  color: #FFFFFF;
+  padding: 10px;
+}
+.gif-container .gif-card .hoverGif .gifInformation .gifTitle {
+  font-family: "Montserrat";
+  color: #FFFFFF;
+  padding: 10px;
 }
 
 /*# sourceMappingURL=home.css.map */

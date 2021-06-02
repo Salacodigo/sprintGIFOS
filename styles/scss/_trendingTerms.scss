@@ -1,0 +1,12 @@
+@import 'variables';
+
+.terms-container{
+   margin: 20px;
+   
+   .trending-term{
+      font-family: $font-medium;
+      margin: 5px;
+      color: $purple-gifos;
+      cursor: pointer;
+   }
+}

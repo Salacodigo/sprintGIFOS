@@ -1,0 +1,29 @@
+@import 'variables';
+
+.search-section{
+   margin: 20px 0px;
+   #input-search{
+      width: 80%;
+      margin: 0px 10px;
+      outline: none;
+      border: $test;
+      font-family: $font-medium;
+      font-size: 25px;
+   }
+   #btn-search{
+      cursor: pointer;
+   }
+
+   .sugerencias-container{
+      display: none;
+
+      .suggestion{
+         width: 80%;
+         font-family: $font-medium;
+         font-size: 25px;
+         margin: 0px 10px;
+         border: $test;
+         cursor: pointer;
+      }
+   }
+}
