@@ -1,3 +1,5 @@
+let claseBusquedaRecord = new Busqueda();
+
 //Funcion para pedir acceso a la cámara
 async function requestCameraAccess() {
    try {
@@ -71,8 +73,8 @@ function stopStreamedVideo(video) {
 }
 
 async function uploadToGiphy(form) {
-   let claseBusqueda = new Busqueda();
-   let response = await claseBusqueda.uploadGIF(form);
+   
+   let response = await claseBusquedaRecord.uploadGIF(form);
    return response.data.id;
 }
 

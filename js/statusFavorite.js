@@ -1,5 +1,5 @@
-function addFavorite(id){
-   
+function addFavorite(id) {
+
    //Agrega a favoritos
    let gifPorAgregar = gifInformation(id);
 
@@ -7,16 +7,24 @@ function addFavorite(id){
    let esFavorito = BDgifsFavoritos.includes(gifPorAgregar);
 
    //Lo agrega o quita del arreglo de favoritos
-   if(!esFavorito){
+   if (!esFavorito) {
       BDgifsFavoritos.push(gifPorAgregar);
-   } else { 
-      BDgifsFavoritos = BDgifsFavoritos.filter( gif => {
+   } else {
+      BDgifsFavoritos = BDgifsFavoritos.filter(gif => {
          return gif.gifId !== gifPorAgregar.gifId;
       });
    }
 
+   //obtiene el nombre del HTML en el que estamos
+   let path = self.location.href;  
+   let posUltimaBarra = path.lastIndexOf("/");
+   let nombreHTML = path.substring(posUltimaBarra + "/".length, path.length);       // index.html
+   // alert(nombreHTML);
+
    //Dibuja los favoritos
-   limpiarContenedor(containerFavorites);
-   dibujaGifCards(BDgifsFavoritos, containerFavorites);
+   if(nombreHTML === 'favorites.html'){
+      limpiarContenedor(containerFavorites);
+      dibujaGifCards(BDgifsFavoritos, containerFavorites);
+   }
    guardarLocalStorage('BDgifsFavoritos', BDgifsFavoritos);
 }

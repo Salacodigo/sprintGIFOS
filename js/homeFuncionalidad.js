@@ -26,7 +26,7 @@ async function buscaPorPalabra(word, verMas=false){
    limpiarContenedor(containerSearch);
    if(verMas == false){
       DBgifsBuscados = [];
-      funcionesBusqueda.offset = 0;
+      claseBusqueda.offset = 0;
    }
    await buscarGifs(word);
    
