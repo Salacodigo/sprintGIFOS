@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+* {
+  text-decoration: none;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.screen-container .screen {
+  display: none;
+  width: 80%;
+  height: 300px;
+  border: 2px solid red;
+  background-color: #572EE5;
+  color: #FFFFFF;
+}
+.screen-container .scStep1 {
+  display: block;
+}
+.screen-container .scStep2 {
+  border: 2px solid red;
+}
+.screen-container .scStep3 video {
+  width: 100%;
+  height: 100%;
+}
+.screen-container .scStep4 {
+  border: 2px solid red;
+}
+.screen-container .downloadBtn, .screen-container .linkBtn {
+  display: none;
+  cursor: pointer;
+}
+.screen-container .steps-container {
+  margin: 20px;
+  display: flex;
+}
+.screen-container .steps-container .step {
+  margin: 5px;
+}
+.screen-container .steps-container .clock {
+  display: none;
+  margin: 5px;
+}
+.screen-container .steps-container .repeat {
+  display: none;
+  margin: 5px;
+  cursor: pointer;
+}
+.screen-container .button-container {
+  display: flex;
+  margin: 5px;
+  cursor: pointer;
+}
+.screen-container .button-container .createBtn {
+  display: none;
+}
+.screen-container .button-container .startBtn {
+  display: block;
+}
+
+/*# sourceMappingURL=createGif.css.map */

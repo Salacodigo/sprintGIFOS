@@ -16,11 +16,16 @@ class Busqueda {
          this.url_trending_terms = 'api.giphy.com/v1/trending/searches',
          //Search GIF url based on GIF id
          this.url_based_id = 'api.giphy.com/v1/gifs'
-         //Offset para el boton ver más
-         this.offset = 0;
+         //endpoint para subir los GIFS Creados
+         this.url_upload = 'upload.giphy.com/v1/gifs';
+      //Offset para el boton ver más
+      this.offset = 0;
+
    }
 
-
+   get getApiKey() { return this.apiKey}
+   
+   
    //Obtiene los resultados a partir de un término de busqueda
    async wordSearch(search, offset = 0, cantidadGIFS = 12) {
 
@@ -34,9 +39,9 @@ class Busqueda {
             '&offset=' + offset);
 
          const arrayBusqueda = await resultados.json();
-         
+
          this.offset += cantidadGIFS;
-         
+
          return arrayBusqueda;
 
       } catch (error) {
@@ -54,7 +59,7 @@ class Busqueda {
             '&limit=' + '10');
 
          const arrayTrending = await resultadosTrending.json();
-         
+
          return arrayTrending;
 
       } catch (error) {
@@ -71,7 +76,7 @@ class Busqueda {
             '?&api_key=' + this.apiKey);
 
          let arrayTrendingTerms = await trendingRespuesta.json();
-         
+
          return arrayTrendingTerms;
 
       } catch (error) {
@@ -85,9 +90,9 @@ class Busqueda {
 
       try {
          const sugerenciasRespuesta = await fetch(
-            'https://' + this.url_related + 
-            '?q=' + word + 
-            '&api_key=' + this.apiKey + 
+            'https://' + this.url_related +
+            '?q=' + word +
+            '&api_key=' + this.apiKey +
             '&limit=4')
          const arraySugerencias = await sugerenciasRespuesta.json();
 
@@ -101,10 +106,27 @@ class Busqueda {
 
    }
 
-   async downloadGIF(id){
+   async downloadGIF(id) {
       let data = await fetch(`https://media2.giphy.com/media/${id}/giphy.gif?${this.apiKey}&rid=giphy.gif`);
 
       return data;
    }
 
+   async uploadGIF(form){
+
+      let request = await fetch(`https://${this.url_upload}?api_key=${this.apiKey}`,
+      {
+         method: 'POST',
+         body: form
+      });
+      let response = await request.json();
+      return response;
+   }
+
+   async gifsInfoById(ids){
+      let request = await fetch(`https://${this.url_based_id}?api_key=${this.apiKey}&ids=${ids}`);
+      let response = await request.json();
+
+      return response;
+   }
 }

@@ -1,11 +1,11 @@
 
 //Instancia de la clase que realiza peticiones a la API
-let funcionesBusqueda = new Busqueda();
+let claseBusqueda = new Busqueda();
 
 //Busca las palabras en trending
 async function buscarTrendingTerms(){
    
-   let dataJSON = await funcionesBusqueda.trendingTerms();
+   let dataJSON = await claseBusqueda.trendingTerms();
 
    //Limpia el arreglo
    BDtrendingTerms = [];
@@ -19,7 +19,7 @@ async function buscarTrendingTerms(){
 //Busca los Gifs en trending
 async function buscarTrendingGifs() {
    BDtrendingGifs =[];
-   let dataJSON = await funcionesBusqueda.trendingGifs();
+   let dataJSON = await claseBusqueda.trendingGifs();
 
    dataJSON.data.forEach(gif => {
 
@@ -43,7 +43,7 @@ async function buscarGifs(word) {
 
    if (word != null || word != "" || word != undefined) {
 
-      let dataJSON = await funcionesBusqueda.wordSearch(word, funcionesBusqueda.offset);
+      let dataJSON = await claseBusqueda.wordSearch(word, claseBusqueda.offset);
 
       dataJSON.data.forEach(gif => {
 
@@ -65,8 +65,16 @@ async function buscarGifs(word) {
 //Busca las palabras relacionadas
 async function buscarSugerencias(word){
    if (word != null || word != "" || word != undefined) {
-      let dataJSON = await funcionesBusqueda.wordSuggestion(word);
+      let dataJSON = await claseBusqueda.wordSuggestion(word);
 
       return dataJSON;
+   }
+}
+
+//Obtiene los datos de los GIFS a partir del id
+async function getGIfsById(ids){
+   if(ids.length > 0){ 
+      let response = await claseBusqueda.gifsInfoById(ids);
+      return response;
    }
 }

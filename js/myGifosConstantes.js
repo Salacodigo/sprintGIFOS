@@ -1,0 +1,1 @@
+let containerMyGifos = document.getElementById('myGifos');

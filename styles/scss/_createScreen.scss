@@ -1,0 +1,81 @@
+@import 'variables';
+
+
+.screen-container{
+   .screen{
+      display: none;
+      width: 80%;
+      height: 300px;
+      border: $test;
+      background-color: $purple-gifos;
+      color: $white-gifos;
+   }
+
+   .scStep1{
+      display: block;
+   }
+
+   .scStep2{
+      border: $test;
+   }
+   
+   .scStep3{
+      video {
+         width: 100%;
+         height: 100%;
+      }
+   }
+   
+   .scStep4{
+      border: $test;
+      
+   }
+
+   .downloadBtn, .linkBtn{
+      display: none;
+      cursor: pointer;
+   }
+
+   .steps-container{
+      margin: 20px;
+      display: flex;
+
+      .step{
+         margin: 5px;
+      }
+      
+      .clock{
+         display: none;
+         margin: 5px;
+         
+      }
+      
+      .repeat{
+         display: none;
+         margin: 5px;
+         cursor: pointer;
+      }
+      
+   }
+   
+   .button-container{
+      display:flex;
+      margin: 5px;
+      cursor: pointer;
+
+      .createBtn{
+         display: none;
+      }
+
+      .startBtn{
+         display: block;
+      }
+
+
+   }
+
+
+
+
+}
+

@@ -4,7 +4,7 @@ async function descargaGIF(nombre, id) {
    let a = document.createElement('a');
    
    // let response = await fetch(`https://media2.giphy.com/media/${id}/giphy.gif?${APIkey}&rid=giphy.gif`);
-   let response = await funcionesBusqueda.downloadGIF(id);
+   let response = await claseBusqueda.downloadGIF(id);
  
    let file = await response.blob();
    //https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#attributes

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Create GIF</title>
+   <link rel="shortcut icon" href="../assets/logo-mobile.svg" />
+   <link rel="stylesheet" href="../styles/css/createGif.css">
+</head>
+
+<body>
+   <h2>Menu</h2>
+   <ul>
+      <li><a href="../pages/index.html">Home</a></li>
+      <li><a href="../pages/favorites.html">Favoritos</a></li>
+      <li><a href="../pages/myGifos.html">MyGifos</a></li>
+      <li><a href="../pages/createGif.html">createGif</a></li>
+
+   </ul>
+
+   <h1>Crear GIF</h1>
+   <div class="screen-container">
+      <!-- PASO 1 -->
+      <div class="screen scStep1" id="scStep1">Pantalla1 - Aqui podras crear tus propios Gifos</div>
+      <div class="screen scStep2" id="scStep2">Pantalla2 - ¿NOs das acceso a tu camara?</div>
+      <div class="screen scStep3" id="scStep3">Pantalla3 Video
+         <video id="video"></video>
+      </div>
+      <div class="screen scStep4" id="scStep4">Pantalla4 - GIFO subido con exito</div>
+
+      <!-- Botones de la pantalla -->
+      <img class="downloadBtn" src="../assets/icon-download.svg" alt="download GIF button" id="downloadCreatedGif">
+      <img class="linkBtn" src="../assets/icon-link-normal.svg" alt="copy link button" id="linkCreatedGif">
+
+
+
+      <!-- Indicadores -->
+      <div class="steps-container">
+         <img class="step stepOne" src="../assets/paso-a-paso1.svg" id="step-one" alt="step one indicator">
+         <img class="step stepTwo" src="../assets/paso-a-paso2.svg" id="step-two" alt="step two indicator">
+         <img class="step stepThree" src="../assets/paso-a-paso3.svg" id="step-three" alt="step three indicator">
+         <div class="crono" id="crono">00:00:00</div>
+         <div class="repeat" id="repeatRecording">REPETIR CAPTURA</div>
+      </div>
+
+      <!-- Botones -->
+      <div class="button-container">
+         <img src="../assets/CTA-comenzar.svg" alt="start button" class="createBtn startBtn" id="startBtn">
+         <img src="../assets/CTA-record.svg" alt="record button" class="createBtn recordBtn" id="recordBtn">
+         <img src="../assets/CTA-finalizar.svg" alt="finish button" class="createBtn finishBtn" id="finishBtn">
+         <img src="../assets/CTA-upload.svg" alt="upload button" class="createBtn uploadBtn" id="uploadBtn">
+      </div>
+
+   </div>
+
+   <script src="../js/GIF.js"></script>
+   <script src="../js/Busqueda.js"></script>
+   <script src="../js/storage.js"></script>
+   <!-- <script src="../js/dibuja.js"></script> -->
+   <!-- <script src="../js/maximizeGIF.js"></script> -->
+   <!-- <script src="../js/statusFavorite.js"></script> -->
+   <script src="../js/downloadGif.js"></script>
+
+   <script src="../js/homeBuscar.js"></script>
+   <script src="../js/createGifConstantes.js"></script>
+   <script src="../js/createRecordGIF.js"></script>
+   <script src="../js/createGifEventListeners.js"></script>
+
+   <!-- UI scripts -->
+   <script src="../js/createGifFuncionalidad.js"></script>
+
+   <!-- WEB RTC -->
+   <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+
+</body>
+
+</html>
