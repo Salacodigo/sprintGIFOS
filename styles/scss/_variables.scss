@@ -1,7 +1,14 @@
 $hoverColor: rgba(87,46,229,0.7);
 $hover-white: rgba(255, 255, 255, 0.7);
+$menu-purple: rgba(87,46,229,0.9);
+$menu-purple-transparent: rgba(87,46,229,0.1);
 $white-gifos: #FFFFFF;
+$white-gifos-transparent: rgba(256,256,256,0.1);
 $purple-gifos: #572EE5;
+$black-gifos: #000000;
+$green-gifos: #50E3C2;
+$division-bar: #9CAFC3;
+
 
 
 //Font-family
@@ -15,3 +22,9 @@ $font-regular: 'Roboto';
 
 
 $test: 2px solid red;
+
+
+//Registro del Z index
+
+// navbar link -> 100
+
