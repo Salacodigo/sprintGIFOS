@@ -154,9 +154,116 @@
    .navbar-section{
       position: sticky;
       top: 0;
-
+   
       .navbar-container{
+         display: flex;
+         
+         .home-img-container{
+            margin: 20px 0px 17px 60px;
+            width:20%;
+            
+            .home-img{
+               height: 49px;
+               width: 56px;
+               
+               #home-GIFOS-logo{
+                  content: url('../../assets/logo-desktop.svg')
+               }
+            }
+         }
+         
+         .menu-container{
+            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width:80%;
+            
+            
+            .label-menu{
+               display: none;
+            }
+   
+            
+            .list-menu-container{
+               z-index: 100;
+               visibility: visible;
+               position: relative;
+               padding-top: 7px;
+               top: 0px;
+               left: 0;
+               width: 100%;
+               height: 100%;
+               background-color: $white-gifos;
+               
+               
+               .list-menu{
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: flex-end;
+               
+                  
+                  li{
+                     margin: 30px;
+                     font-family: $font-bold;
+                     line-height: 19px;
+                     font-size: 15px;
+                     text-align: center;
+                  
+                     
+                     .link-menu{
+                           
+                        span{
+                           color: $purple-gifos;
+                           display: inline-block;
+                           text-transform: uppercase;
+                           padding-bottom: 1px ;
+                           border-bottom: 2px solid $white-gifos;
+               
+                           &:hover{
+                              border-bottom: 2px solid $green-gifos-bar;
+                           }
+                           
+                        }
 
+                        #crear-gif-link{
+                           display:none;
+                        }
+                        #crear-gif-img{
+                           display:inline;
+                           margin: -15px 40px -15px -15px;
+                           &:hover {
+                              content: url('../../assets/CTA-crear-gifo-hover.svg')
+                           }
+                        }
+                     }
+                  }
+               }
+               
+       
+               .link-menu::after{
+                 content: '';
+                 position: absolute;
+                 background-color: $white-gifos-transparent;
+                 width: 41px;
+                 height: 0.1px;
+                 margin-top: 35px;
+                 left: calc(50% - 20.5px);
+               }
+       
+               .link-menu:hover{
+                 span{
+                   border-bottom: 2px solid $division-bar;
+                 }
+               }
+       
+               .link-menu:active{
+                 color: $division-bar;
+                 text-decoration: none;
+               }
+       
+             }
+         }
       }
    }
 }
