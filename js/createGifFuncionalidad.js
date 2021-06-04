@@ -44,7 +44,7 @@ async function finishBtnAction() {
 
 async function uploadBtnAction() {
    console.log('uploadBtnAction');
-   stopStreamedVideo(video);
+   await stopStreamedVideo(video);
    cambioPantalla4();
    let id = await uploadToGiphy(form);
    informacionBotones(id);
@@ -101,7 +101,6 @@ function cambioPaso6(){
    downloadCreatedGif.style.display = "block";
    linkCreatedGif.style.display = "block";
 }
-
 
 
 //Agrega la informacion del GIF Creado a los botones de link y descarga

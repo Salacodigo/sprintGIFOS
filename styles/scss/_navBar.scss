@@ -151,6 +151,14 @@
 // TABLET
 @media(min-width: 768px){
    
+   .navbar-section{
+      position: sticky;
+      top: 0;
+
+      .navbar-container{
+
+      }
+   }
 }
 
 // DESKTOP
