@@ -2,60 +2,90 @@
 
 .maximize-container{
    display: none;
+   flex-direction: column;
+   justify-content: center;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 200;
+   background-color: $white-gifos-transparent;
+
+   .closeBtn{
+      cursor: pointer;
+      position: absolute;
+      width: 14px;
+      top: 50px;
+      left: unset;
+      right: 20px;
+      
+   }
 
    .maximized-gif-card{
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      border: $test;
-      position: relative;
+      width: 318px;
+      position: absolute;
+      align-self: center;
+      justify-self: center;
+      top: 128px;
+      
    
       .gifImage{
-         
-         width: 100%;
-         height: 100%;
+         width: 318px;
+         height: 245px;
+         object-fit: contain;
+         background-color: $hover-white;
+          
       }
       
-      .hoverGif{
+      .gifDescription{
          position: relative;
          background-color: $hover-white;
          width: 100%;
          height: 100%;
+         display: flex;
          
-         .gifButtonContainer{
-            padding: 10px;
-            .favoriteBtn{
-               cursor: pointer;
-               
-            }
-            
-            .downloadBtn{
-               cursor: pointer;
-            
-            }
-            
-            .expandBtn{
-               cursor: pointer;
-               
-            }
-         }
-   
          .gifInformation{
-            color: $purple-gifos;
-
+            color: $black-gifos;
+            width: 60%;
+            
             .gifUser{
                font-family: $font-medium;
+               margin: 14px 6px 6px 6px;
+               font-size: 12px;
                
-               padding: 10px;
             }
             
             .gifTitle{
                font-family: $font-medium;
+               margin: 0px 6px 6px 6px;
+               font-size: 16px;
                
-               padding: 10px;
+               
    
             }
          }
+         
+         .gifButtonContainer{
+            width: 40%;
+            display: flex;
+            justify-content: flex-end;
+            .favoriteBtn{
+               margin-right: 20px;
+               cursor: pointer;
+               width: 36px;
+            }
+            
+            .downloadBtn{
+               cursor: pointer;
+               width: 36px;
+            
+            }
+         
+         }
+   
+
       }
    }
 }

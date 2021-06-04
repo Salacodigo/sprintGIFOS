@@ -16,46 +16,72 @@
 
 .maximize-container {
   display: none;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.maximize-container .closeBtn {
+  cursor: pointer;
+  position: absolute;
+  width: 14px;
+  top: 50px;
+  left: unset;
+  right: 20px;
 }
 .maximize-container .maximized-gif-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border: 2px solid red;
-  position: relative;
+  width: 318px;
+  position: absolute;
+  align-self: center;
+  justify-self: center;
+  top: 128px;
 }
 .maximize-container .maximized-gif-card .gifImage {
-  width: 100%;
-  height: 100%;
+  width: 318px;
+  height: 245px;
+  object-fit: contain;
+  background-color: rgba(255, 255, 255, 0.7);
 }
-.maximize-container .maximized-gif-card .hoverGif {
+.maximize-container .maximized-gif-card .gifDescription {
   position: relative;
   background-color: rgba(255, 255, 255, 0.7);
   width: 100%;
   height: 100%;
+  display: flex;
 }
-.maximize-container .maximized-gif-card .hoverGif .gifButtonContainer {
-  padding: 10px;
+.maximize-container .maximized-gif-card .gifDescription .gifInformation {
+  color: #000000;
+  width: 60%;
 }
-.maximize-container .maximized-gif-card .hoverGif .gifButtonContainer .favoriteBtn {
-  cursor: pointer;
-}
-.maximize-container .maximized-gif-card .hoverGif .gifButtonContainer .downloadBtn {
-  cursor: pointer;
-}
-.maximize-container .maximized-gif-card .hoverGif .gifButtonContainer .expandBtn {
-  cursor: pointer;
-}
-.maximize-container .maximized-gif-card .hoverGif .gifInformation {
-  color: #572EE5;
-}
-.maximize-container .maximized-gif-card .hoverGif .gifInformation .gifUser {
+.maximize-container .maximized-gif-card .gifDescription .gifInformation .gifUser {
   font-family: "Montserrat";
-  padding: 10px;
+  margin: 14px 6px 6px 6px;
+  font-size: 12px;
 }
-.maximize-container .maximized-gif-card .hoverGif .gifInformation .gifTitle {
+.maximize-container .maximized-gif-card .gifDescription .gifInformation .gifTitle {
   font-family: "Montserrat";
-  padding: 10px;
+  margin: 0px 6px 6px 6px;
+  font-size: 16px;
+}
+.maximize-container .maximized-gif-card .gifDescription .gifButtonContainer {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.maximize-container .maximized-gif-card .gifDescription .gifButtonContainer .favoriteBtn {
+  margin-right: 20px;
+  cursor: pointer;
+  width: 36px;
+}
+.maximize-container .maximized-gif-card .gifDescription .gifButtonContainer .downloadBtn {
+  cursor: pointer;
+  width: 36px;
 }
 
 .gif-container {

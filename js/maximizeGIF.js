@@ -38,7 +38,7 @@ function maximizeGIF(id) {
    maximizedGifUser.innerHTML = `${gifInfo.user}`;
    maximizedGifTitle.innerHTML = `${gifInfo.title}`;
 
-   maximizeContainer.style.display = 'block';
+   maximizeContainer.style.display = 'flex';
 }
 
 //Busca en las bases de datos por ID para encontrar el Gif y retorna el gif si lo encuentra
