@@ -7,7 +7,9 @@
 //Botones gifs
 
 function loadEventListeners() {
-   btnSearch.addEventListener('click', buscarBtn);
+   
+   lookupsearchBtn.addEventListener('click', buscarBtn);
+   clearInputBtn.addEventListener('click', clearInput);
 
    trendingTerms.forEach(term => {
       term.addEventListener('click', buscarTrendingTerm);

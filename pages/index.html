@@ -66,8 +66,13 @@
    <!-- GIF MAXIMIZADO -->
    <div class="maximize-container" id="maximize-container">
       <img class="closeBtn" id="closeMaximizedGifBtn" src="../assets/close.svg" alt="close maximized GIF button">
+
+      <div class="previous-arrow" id="previous-arrow">
+         <img src="../assets/button-slider-left.svg" alt="previous-gif-button">
+      </div>
       <div class="maximized-gif-card">
-         <img class="gifImage" id="maximized-gifImage" src="https://media4.giphy.com/media/LGBKlgMCKQbkDKcG4t/giphy-preview.webp?cid=69b893b54j3il5qk7sqlag0lbfbz95kti0g5fqbpr01x3989&rid=giphy-preview.webp&ct=g">
+         <img class="gifImage" id="maximized-gifImage"
+            src="https://media4.giphy.com/media/LGBKlgMCKQbkDKcG4t/giphy-preview.webp?cid=69b893b54j3il5qk7sqlag0lbfbz95kti0g5fqbpr01x3989&rid=giphy-preview.webp&ct=g">
          <div class="gifDescription">
             <div class="gifInformation">
                <p class="gifUser" id="maximizedGifUser">mariannaraskin</p>
@@ -81,16 +86,38 @@
             </div>
          </div>
       </div>
+      <div class="next-arrow" id="next-arrow">
+         <img src="../assets/button-slider-right.svg" alt="next gif button">
+      </div>
    </div>
 
-
-   <h1>Buscador GIFS</h1>
+   <!-- Seccion bienvenida y busqueda -->
    <section class="search-section">
-
-      <input type="text" placeholder="Busque un termino" value="Gol" id="input-search">
-      <button id="btn-search">Buscar</button>
-      <ul class="sugerencias-container" id="sugerencias-container">
-      </ul>
+      <div class="title-container">
+         <h1 class="welcome-title">Inspírate, busca, guarda, y crea los mejores
+            <span class="green-text">GIFOS</span>
+         </h1>
+         <div class="welcome-img">
+            <img src="../assets/ilustra_header.svg" alt="Inspirate, busca, guarda, y crea los mejore GIFOS">
+         </div>
+      </div>
+      <!-- Input del termino a buscar -->
+      <div class="input-container">
+         <div class="first-row">
+            <img src="../assets/icon-search.svg"
+            alt="look up" class="lookup-searchBtn" id="lookup-searchBtn"> 
+            <input type="text" class="input-search" placeholder="Busca GIFOS y más" value="" id="input-search">
+            <img src="../assets/icon-search.svg"
+            alt="look up" class="lookup-open-suggestion" id="lookup-open-suggestion"> 
+            <img src="../assets/close.svg"
+            alt="look up" class="clear-input" id="clear-input"> 
+            
+         </div>
+         <!-- Sugerencias de busqueda -->
+         <hr class="suggestion-division" id="suggestion-division">
+         <ul class="sugerencias-container" id="sugerencias-container">
+         </ul>
+      </div>
    </section>
 
    <!-- gifs trending -->

@@ -1,7 +1,13 @@
 
 //Search GIFS Constants
 const inputSearch = document.getElementById('input-search');
-const btnSearch = document.getElementById('btn-search');
+//Lupa del input order1
+const lookupsearchBtn = document.getElementById('lookup-searchBtn');
+const lookupOpenBtn = document.getElementById('lookup-open-suggestion');
+const clearInputBtn = document.getElementById('clear-input');
+
+
+
 const containerSearch = document.getElementById('buscados');
 const btnVerMas = document.getElementById('btn-VerMas');
 

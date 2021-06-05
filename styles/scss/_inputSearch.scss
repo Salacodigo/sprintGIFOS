@@ -1,29 +1,143 @@
 @import 'variables';
 
 .search-section{
+   display: flex;
+   flex-direction: column;
    margin: 20px 0px;
-   #input-search{
-      width: 80%;
-      margin: 0px 10px;
-      outline: none;
-      border: $test;
-      font-family: $font-medium;
+
+   .title-container{
+      width: 286px;
+      margin: auto;
+      margin-top: 7px;
+      margin-bottom: -4px;
+      
+    .welcome-title{
+      color: $purple-gifos;
+      font-family: $font-bold;
+      font-weight: 700;
       font-size: 25px;
-   }
-   #btn-search{
-      cursor: pointer;
-   }
+      text-align: center;
 
-   .sugerencias-container{
-      display: none;
-
-      .suggestion{
-         width: 80%;
-         font-family: $font-medium;
-         font-size: 25px;
-         margin: 0px 10px;
-         border: $test;
-         cursor: pointer;
+      body.dark & {
+        color: $white-gifos;
       }
+
+      .green-text{
+        color: $green-gifos;
+      }
+    }
+    .welcome-img{
+       margin-top: 35px;
+       width: 300px;
+
+       img{
+          object-fit: fill;
+          width: 100%;
+       }
+    }
+
+  }
+
+   .input-container{
+      background-color: $white-gifos;
+      border-radius: 25px;
+      border: 2px solid $purple-gifos;
+      padding: 0px 20px;
+      margin: 0 auto;
+      width: 90%;
+      max-width: 651px;
+      max-width: 551px;
+
+      .first-row{
+         display: flex;
+         align-items: center;
+         .lookup-searchBtn,
+         .lookup-open-suggestion,
+         .clear-input{
+            margin: 5px 10px 5px 5px;
+            width: 13px;
+            height: 13px;
+            object-fit: cover;
+            cursor: pointer;
+
+         }
+
+
+         .lookup-searchBtn{
+            order: 1;
+            visibility: hidden;
+         }
+         .input-search{
+            order: 2;
+            margin: 0px;
+            width: calc(100% - 40px);
+            display: flex;
+            height: 35px;
+            outline: none;
+            color: $dark-green-gifos;
+            background-color: $white-gifos;
+            font-family: $font-regular;
+            font-size: 14px;
+            border: hidden;
+            cursor: pointer;
+            
+            
+            &:focus{
+               color: $black-gifos;
+            }
+         }
+         .lookup-open-suggestion{
+            order: 3;
+            
+         }
+         .clear-input{
+            order: 4;
+            width: 10px;
+            height: 10px;
+            display: none;
+         }
+      }
+      .suggestion-division{
+         display: none;
+      }
+
+
+      .sugerencias-container{
+         margin: 0px;
+         
+         
+         .suggestion{
+            display: flex;
+            height: 30px;
+            align-items: center;
+            width: 100%;
+            font-family: $font-regular;
+            font-size: 14px;
+            cursor: pointer;
+            color: $division-bar;
+            line-height: 19px;
+            
+            .lookup-suggestion{
+               display: flex;
+               width: 12px;
+               height: 12px;
+               margin-left: 10px;
+               
+               .lookup-suggestion-img{
+                  object-fit: cover;
+                  height: 100%;
+                  width: 100%;
+               }
+
+            }
+
+            span{
+               margin-left: 10px;
+            }
+         }
+      }
+
    }
+
+
 }

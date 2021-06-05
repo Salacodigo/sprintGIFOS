@@ -71,14 +71,25 @@ async function sugerencias() {
 
 }
 
-async function mostrarSugerencias() {
+function mostrarSugerencias() {
    sugerenciasContainer.style.display = "block";
+   lookupsearchBtn.style.visibility = "visible";
+   clearInputBtn.style.display = "flex";
+   lookupOpenBtn.style.display = "none";
+   
 }
 
-async function ocultarSugerencias() {
+function ocultarSugerencias() {
    sugerenciasContainer.style.display = "none";
+   lookupsearchBtn.style.visibility = "hidden";
+   clearInputBtn.style.display = "none";
+   lookupOpenBtn.style.display = "flex";
 }
 
+function clearInput(){
+   inputSearch.value = '';
+   ocultarSugerencias();
+}
 
 async function verMas(){
    let word = inputSearch.value;

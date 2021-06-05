@@ -139,7 +139,14 @@ function dibujarSugerencias(data, container) {
 
       const li = document.createElement('li');
       li.className = "suggestion";
-      li.innerHTML = `<span data-word="${word.name}">${word.name}</span>`
+      li.setAttribute('data-word',`${word.name}`)
+      li.innerHTML = `
+      <div class="lookup-suggestion">
+         <img src="../../assets/icon-search.svg"
+         data-word="${word.name} class="lookup-suggestion-img"
+         alt="look up ${word.name}">
+      </div>
+      <span data-word="${word.name}">${word.name}</span>`
 
       container.appendChild(li);
    });
