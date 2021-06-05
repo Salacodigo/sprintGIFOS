@@ -104,21 +104,19 @@
       <!-- Input del termino a buscar -->
       <div class="input-container">
          <div class="first-row">
-            <img src="../assets/icon-search.svg"
-            alt="look up" class="lookup-searchBtn" id="lookup-searchBtn"> 
+            <img src="../assets/icon-search.svg" alt="look up" class="lookup-searchBtn" id="lookup-searchBtn">
             <input type="text" class="input-search" placeholder="Busca GIFOS y más" value="" id="input-search">
-            <img src="../assets/icon-search.svg"
-            alt="look up" class="lookup-open-suggestion" id="lookup-open-suggestion"> 
-            <img src="../assets/close.svg"
-            alt="look up" class="clear-input" id="clear-input"> 
-            
+            <img src="../assets/icon-search.svg" alt="look up" class="lookup-open-suggestion"
+               id="lookup-open-suggestion">
+            <img src="../assets/close.svg" alt="look up" class="clear-input" id="clear-input">
+
          </div>
          <!-- Sugerencias de busqueda -->
          <hr class="suggestion-division" id="suggestion-division">
          <ul class="sugerencias-container" id="sugerencias-container">
          </ul>
       </div>
-   
+
       <!-- gifs trending -->
       <div class="subtitle">
          <span>Trending:</span>
@@ -127,23 +125,40 @@
    </section>
 
 
+   <!-- Resultados de la busqueda -->
+   <section class="gif-search-results">
+      <hr class="division" id="division">
+      <div class="title-container">
+         <h2 class="title" id="title">Lorem Ipsum</h2>
+      </div>
+      <!-- lorem__container se muestra si no hay resultados -->
+      <div class="lorem-container" id="lorem-container">
+         <img src="../assets/icon-busqueda-sin-resultado.svg" alt="No hay resultados de busqueda">
+         <p class="title">Intenta con otra búsqueda</p>
+      </div>
+      <!-- main__container se oculta si no hay resultados -->
 
-   <!-- Busqueda -->
-   <h2>Gifs buscados</h2>
-   <div id="cont-resultados">
-      <div class="gif-container" id="buscados"></div>
-   </div>
-   <button id="btn-VerMas">Ver mas</button>
+      <div id="cont-resultados">
+         <div class="gif-container" id="buscados"></div>
+      </div>
+
+      <div class="btn-VerMas" id="btn-VerMas">
+         <img src="../assets/CTA-ver-mas.svg" alt="Ver mas GIFOS">
+      </div>
+   </section>
 
 
 
    <!-- GIFS trending -->
-   <h2>Gifs trending</h2>
+   <section class="trending-carrousel">
+
+      <h2>Gifs trending</h2>
    <div>
       <div class="gif-container" id="carrousel">
-
+         
       </div>
    </div>
+</section>
 
    <script src="../js/GIF.js"></script>
    <script src="../js/Busqueda.js"></script>

@@ -292,63 +292,256 @@
     content: url("../../assets/icon-download-hover.svg");
   }
 }
-.gif-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
-  grid-auto-rows: minmax(150px, 200px);
+.gif-search-results {
+  border: 1px solid #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
   justify-content: center;
 }
-.gif-container .gif-card {
+.gif-search-results .division {
+  display: flex;
+  margin-top: 55px;
+  width: 157px;
+  margin: 0 auto;
+}
+.gif-search-results .title-container .title {
+  text-align: center;
+  color: #572EE5;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 40px;
+  margin: 65px 0px 60px 0px;
+}
+.gif-search-results .lorem-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.gif-search-results .lorem-container img {
+  align-self: center;
+  width: 109px;
+}
+.gif-search-results .lorem-container .title {
+  text-align: center;
+  color: #50E3C2;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 40px;
+  margin: 65px 0px 60px 0px;
+}
+.gif-search-results .gif-container {
+  justify-content: center;
+  margin: 0 auto;
+  display: grid;
+  padding: 0px 21px;
+  grid-template-columns: repeat(2, 156px);
+  grid-auto-rows: minmax(120px, 130px);
+  column-gap: 21px;
+  row-gap: 25px;
+}
+.gif-search-results .gif-container .gif-card {
+  position: relative;
   display: flex;
   justify-content: center;
-  border: 2px solid red;
-  position: relative;
+  width: 156px;
+  height: 120px;
 }
-.gif-container .gif-card .gifImage {
+.gif-search-results .gif-container .gif-card .gifImage {
+  background-color: #FFFFFF;
   width: 100%;
   height: 100%;
 }
-.gif-container .gif-card .hoverGif {
+.gif-search-results .gif-container .gif-card .gifImage:hover ~ .hoverGif {
+  cursor: default;
+  visibility: visible;
+}
+.gif-search-results .gif-container .gif-card .hoverGif {
+  visibility: hidden;
   position: absolute;
   background-color: rgba(87, 46, 229, 0.7);
   width: 100%;
   height: 100%;
 }
-.gif-container .gif-card .hoverGif .gifButtonContainer {
+.gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
   padding: 10px;
 }
-.gif-container .gif-card .hoverGif .gifButtonContainer .favoriteBtn {
+.gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .favoriteBtn, .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .downloadBtn, .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .expandBtn {
   cursor: pointer;
+  height: 32px;
+  width: 32px;
+  margin-left: 10px;
 }
-.gif-container .gif-card .hoverGif .gifButtonContainer .downloadBtn {
-  cursor: pointer;
+.gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .favoriteBtn:hover {
+  content: url("../../assets/icon-fav-hover.svg");
 }
-.gif-container .gif-card .hoverGif .gifButtonContainer .expandBtn {
-  cursor: pointer;
+.gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .downloadBtn:hover {
+  content: url("../../assets/icon-download-hover.svg");
 }
-.gif-container .gif-card .hoverGif .gifInformation .gifUser {
-  font-family: "Montserrat";
+.gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .expandBtn:hover {
+  content: url("../../assets/icon-max-hover.svg");
+}
+.gif-search-results .gif-container .gif-card .hoverGif .gifInformation {
+  margin-top: 60px;
+}
+.gif-search-results .gif-container .gif-card .hoverGif .gifInformation .gifUser {
+  margin: 5px 0px;
+  font-family: "Roboto";
+  font-size: 13px;
+  line-height: 15px;
   color: #FFFFFF;
-  padding: 10px;
 }
-.gif-container .gif-card .hoverGif .gifInformation .gifTitle {
+.gif-search-results .gif-container .gif-card .hoverGif .gifInformation .gifTitle {
   font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 15px;
   color: #FFFFFF;
-  padding: 10px;
+}
+.gif-search-results .btn-VerMas {
+  margin-top: 80px;
+  align-self: center;
+  width: 127px;
+  display: flex;
+  cursor: pointer;
+}
+.gif-search-results .btn-VerMas img {
+  width: 100%;
+}
+.gif-search-results .btn-VerMas img:hover {
+  content: url("../../assets/CTA-ver-mas-hover.svg");
 }
 
+@media (min-width: 768px) {
+  .gif-search-results {
+    border: 1px solid #FFFFFF;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    justify-content: center;
+  }
+  .gif-search-results .division {
+    display: flex;
+    margin-top: 55px;
+    width: 157px;
+    margin: 0 auto;
+  }
+  .gif-search-results .title-container .title {
+    text-align: center;
+    color: #572EE5;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 40px;
+    margin: 65px 0px 60px 0px;
+  }
+  .gif-search-results .lorem-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .gif-search-results .lorem-container img {
+    align-self: center;
+    width: 109px;
+  }
+  .gif-search-results .lorem-container .title {
+    text-align: center;
+    color: #50E3C2;
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 65px 0px 60px 0px;
+  }
+  .gif-search-results .gif-container {
+    justify-content: center;
+    margin: 0 auto;
+    display: grid;
+    padding: 0px 21px;
+    grid-template-columns: repeat(3, 220px);
+    grid-auto-rows: minmax(170px, 220px);
+    column-gap: 21px;
+    row-gap: 25px;
+  }
+  .gif-search-results .gif-container .gif-card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+  }
+  .gif-search-results .gif-container .gif-card .gifImage {
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 100%;
+  }
+  .gif-search-results .gif-container .gif-card .hoverGif {
+    position: absolute;
+    background-color: rgba(87, 46, 229, 0.7);
+    width: 100%;
+    height: 100%;
+  }
+  .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px;
+  }
+  .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .favoriteBtn, .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .downloadBtn, .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .expandBtn {
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    margin-left: 10px;
+  }
+  .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .favoriteBtn:hover {
+    content: url("../../assets/icon-fav-hover.svg");
+  }
+  .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .downloadBtn:hover {
+    content: url("../../assets/icon-download-hover.svg");
+  }
+  .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .expandBtn:hover {
+    content: url("../../assets/icon-max-hover.svg");
+  }
+  .gif-search-results .gif-container .gif-card .hoverGif .gifInformation .gifUser {
+    margin: 5px 0px;
+    font-family: "Roboto";
+    font-size: 13px;
+    line-height: 15px;
+    color: #FFFFFF;
+  }
+  .gif-search-results .gif-container .gif-card .hoverGif .gifInformation .gifTitle {
+    font-family: "Montserrat";
+    font-size: 14px;
+    line-height: 15px;
+    color: #FFFFFF;
+  }
+  .gif-search-results .btn-VerMas {
+    margin-top: 80px;
+    align-self: center;
+    width: 127px;
+    display: flex;
+    cursor: pointer;
+  }
+  .gif-search-results .btn-VerMas img {
+    width: 100%;
+  }
+  .gif-search-results .btn-VerMas img:hover {
+    content: url("../../assets/CTA-ver-mas-hover.svg");
+  }
+}
 .gif-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
-  grid-auto-rows: minmax(150px, 200px);
   justify-content: center;
 }
 .gif-container .gif-card {
   display: flex;
   justify-content: center;
-  border: 2px solid red;
   position: relative;
 }
 .gif-container .gif-card .gifImage {

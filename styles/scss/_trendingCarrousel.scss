@@ -5,13 +5,12 @@
    display: grid;
    grid-template-columns: repeat(2, 1fr);
    grid-gap: 10px;
-   grid-auto-rows: minmax(150px, 200px);
+   
    justify-content: center;
 
    .gif-card{
       display: flex;
       justify-content: center;
-      border: $test;
       position: relative;
 
       .gifImage{

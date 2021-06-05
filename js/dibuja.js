@@ -142,7 +142,7 @@ function dibujarSugerencias(data, container) {
       li.setAttribute('data-word',`${word.name}`)
       li.innerHTML = `
       <div class="lookup-suggestion">
-         <img src="../../assets/icon-search.svg"
+         <img src="../assets/icon-search.svg"
          data-word="${word.name} class="lookup-suggestion-img"
          alt="look up ${word.name}">
       </div>

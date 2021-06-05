@@ -63,6 +63,7 @@
             
             .menu-checker{
                width: 15px;
+               cursor: pointer;
                
                .btn-burguer{
                   width: 100%;
@@ -104,13 +105,22 @@
                   text-align: center;       
                   
                   .link-menu{
-                        
+                     #crear-gif-link{
+                        display: inline;
+
+                     }
+
+                     #crear-gif-img{
+                        display: none;
+                     }
                      span{
                         color: $white-gifos;
                         display: inline-block;
                         padding-bottom: 1px ;
                         border-bottom: 2px solid $menu-purple-transparent;
-            
+                        
+                       
+
                         &:hover{
                            border-bottom: 2px solid $green-gifos;
                         }
