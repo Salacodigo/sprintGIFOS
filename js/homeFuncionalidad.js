@@ -103,7 +103,6 @@ async function verMas(){
 }
 
 //Muestra el loremContainer para decir que no hay resultados
- 
 function noSeEncuentranGifsSearch(){
    
    division.style.display = "flex";

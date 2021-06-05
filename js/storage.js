@@ -6,6 +6,8 @@ let BDgifsFavoritos = [];
 let BDtrendingTerms = [];
 let BDcreatedGifs = [];
 let BDcreatedGifsId = [];
+//Para saber a qué arreglo pertenece el GIFS
+let arregloGIF = [];
 
 //Revisa si hay info guardada de GIfs Favoritos y la carga
 try {

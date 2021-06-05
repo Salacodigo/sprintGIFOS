@@ -14,7 +14,7 @@ function addFavorite(id) {
          return gif.gifId !== gifPorAgregar.gifId;
       });
    }
-
+   //Lo siguiente es para actualizar solo si estamos en el HTML de favoritos
    //obtiene el nombre del HTML en el que estamos
    let path = self.location.href;  
    let posUltimaBarra = path.lastIndexOf("/");
@@ -27,4 +27,6 @@ function addFavorite(id) {
       dibujaGifCards(BDgifsFavoritos, containerFavorites);
    }
    guardarLocalStorage('BDgifsFavoritos', BDgifsFavoritos);
+
 }
+

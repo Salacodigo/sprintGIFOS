@@ -765,7 +765,6 @@ body.dark .search-section .title-container .welcome-title {
   color: #FFFFFF;
 }
 .gif-search-results .btn-VerMas {
-  display: flex;
   display: none;
   margin-top: 80px;
   align-self: center;
@@ -865,6 +864,9 @@ body.dark .search-section .title-container .welcome-title {
   .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .favoriteBtn:hover {
     content: url("../../assets/icon-fav-hover.svg");
   }
+  .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .favoriteBtn:active {
+    content: url("../../assets/icon-fav-active.svg");
+  }
   .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .downloadBtn:hover {
     content: url("../../assets/icon-download-hover.svg");
   }
@@ -891,7 +893,6 @@ body.dark .search-section .title-container .welcome-title {
     margin-top: 80px;
     align-self: center;
     width: 127px;
-    display: flex;
     cursor: pointer;
   }
   .gif-search-results .btn-VerMas img {
@@ -910,7 +911,6 @@ body.dark .search-section .title-container .welcome-title {
     justify-content: center;
   }
   .gif-search-results .division {
-    display: flex;
     margin-top: 55px;
     width: 157px;
     margin: 0 auto;
@@ -925,7 +925,6 @@ body.dark .search-section .title-container .welcome-title {
     margin: 65px 0px 60px 0px;
   }
   .gif-search-results .lorem-container {
-    display: flex;
     flex-direction: column;
     justify-content: center;
   }
@@ -989,6 +988,9 @@ body.dark .search-section .title-container .welcome-title {
   .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .favoriteBtn:hover {
     content: url("../../assets/icon-fav-hover.svg");
   }
+  .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .favoriteBtn:active {
+    content: url("../../assets/icon-fav-active.svg");
+  }
   .gif-search-results .gif-container .gif-card .hoverGif .gifButtonContainer .downloadBtn:hover {
     content: url("../../assets/icon-download-hover.svg");
   }
@@ -1015,7 +1017,6 @@ body.dark .search-section .title-container .welcome-title {
     margin-top: 80px;
     align-self: center;
     width: 127px;
-    display: flex;
     cursor: pointer;
   }
   .gif-search-results .btn-VerMas img {

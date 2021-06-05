@@ -17,6 +17,10 @@ function dibujaGifCards(data, container) {
       //Se crea el contenedor de los botones
       const hoverGif = document.createElement('div');
       hoverGif.className = 'hoverGif';
+      hoverGif.addEventListener('click', (e) => {
+         e.stopPropagation();
+         maximizeGIF(gif.id);
+      });
 
       //Se crea el contenedor de los botones
       const gifButtonContainer = document.createElement('div');
@@ -63,11 +67,13 @@ function generaBtnFavorite(gif) {
    btnFavorite.setAttribute('data-id', `${gif.gifId}`);
    btnFavorite.setAttribute('src', "../assets/icon-fav.svg");
    btnFavorite.setAttribute('alt', 'favorite button');
-
+   
    //Accion que realizará el Botón
-   btnFavorite.addEventListener('click', () => {
+   btnFavorite.addEventListener('click', (e) => {
+      e.stopPropagation();
       let id = `${gif.gifId}`;
-      addFavorite(id)
+      addFavorite(id); //Controla la BD de favoritos
+      console.log('presionado')
    })
 
    return btnFavorite;
@@ -83,7 +89,8 @@ function generaBtnDownload(gif) {
    btnDownload.setAttribute('alt', 'download GIF button');
 
    //Accion que realizará el Botón
-   btnDownload.addEventListener('click', () => {
+   btnDownload.addEventListener('click', (e) => {
+      e.stopPropagation();
       descargaGIF(`${gif.gifTitle}`,`${gif.gifId}`);
    })
 
@@ -100,8 +107,8 @@ function generaBtnExpand(gif) {
    btnExpand.setAttribute('alt', 'maximize GIF button');
    
    //Accion que realizará el Botón
-   btnExpand.addEventListener('click', () => {
-      
+   btnExpand.addEventListener('click', (e) => {
+      e.stopPropagation();
       let id = `${gif.gifId}`;
       maximizeGIF(id);
    })

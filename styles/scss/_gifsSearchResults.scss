@@ -100,7 +100,8 @@
                .favoriteBtn{
                   &:hover{
                      content: url('../../assets/icon-fav-hover.svg')
-                  }
+                  }                  
+
                }
                
                .downloadBtn{
@@ -142,7 +143,6 @@
    }
    
    .btn-VerMas{
-      display: flex;
       display: none;
       margin-top: 80px ;
       align-self: center;
@@ -264,6 +264,9 @@
                   &:hover{
                      content: url('../../assets/icon-fav-hover.svg')
                   }
+                  &:active{
+                     content: url('../../assets/icon-fav-active.svg')
+                  }
                }
                
                .downloadBtn{
@@ -308,7 +311,6 @@
       margin-top: 80px ;
       align-self: center;
       width:127px;
-      display: flex;
       cursor: pointer;
       img{
          width: 100%;
@@ -331,7 +333,7 @@
 
  
    .division{
-     display: flex;
+     
      margin-top: 55px;
      width: 157px;
      margin: 0 auto;
@@ -349,7 +351,7 @@
      }
    }
    .lorem-container{
-      display: flex;
+      
       flex-direction: column;
       justify-content: center;
 
@@ -424,6 +426,9 @@
                   &:hover{
                      content: url('../../assets/icon-fav-hover.svg')
                   }
+                  &:active{
+                     content: url('../../assets/icon-fav-active.svg')
+                  }
                }
                
                .downloadBtn{
@@ -465,10 +470,10 @@
    }
    
    .btn-VerMas{
+      
       margin-top: 80px ;
       align-self: center;
       width:127px;
-      display: flex;
       cursor: pointer;
       img{
          width: 100%;
