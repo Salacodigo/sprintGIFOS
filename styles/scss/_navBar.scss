@@ -1,6 +1,7 @@
 
 .navbar-section{
    background-color: $white-gifos;
+   z-index: 100;
 
    .blue-bar{
 
@@ -78,7 +79,8 @@
                 
               }
             }
-          }
+         }
+         
 
 
          .list-menu-container{
