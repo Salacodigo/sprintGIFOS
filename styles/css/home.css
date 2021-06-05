@@ -602,6 +602,36 @@ body.dark .search-section .title-container .welcome-title {
 .search-section .input-container .sugerencias-container .suggestion span {
   margin-left: 10px;
 }
+.search-section .subtitle {
+  margin-top: 31px;
+  text-align: center;
+}
+.search-section .subtitle span {
+  color: #572EE5;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 25px;
+}
+.search-section .terms-container {
+  display: flexbox;
+  margin-top: 5px;
+  text-align: center;
+  align-self: center;
+  width: 225px;
+}
+.search-section .terms-container a {
+  font-family: "Montserrat";
+  font-size: 14px;
+  line-height: 25px;
+  width: 225px;
+  margin: 2px auto 45px auto;
+  text-align: center;
+}
+.search-section .terms-container a span {
+  color: #572EE5;
+  cursor: pointer;
+}
 
 .terms-container {
   margin: 20px;

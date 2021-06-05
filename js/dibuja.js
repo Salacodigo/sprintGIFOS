@@ -121,7 +121,7 @@ function dibujaTrendingTerms(data, container) {
          const a = document.createElement('a');
          a.className = "trending-term";
          if (contador !== cantidad) {
-            a.innerHTML = `<span data-word="${gif}">${gif},</span>`
+            a.innerHTML = `<span data-word="${gif}">${gif}, </span>`
          } else {
             a.innerHTML = `<span data-word="${gif}">${gif}</span>`
          }

@@ -138,6 +138,39 @@
       }
 
    }
+   
+   .subtitle{
+      margin-top: 31px;
+   text-align: center;
 
+      span{
+         color: $purple-gifos;
+         font-family: $font-bold;
+         font-weight: 700;
+         font-size: 16px;
+         line-height: 25px;
+      }
+   }
 
+   .terms-container{
+      display: flexbox;
+      margin-top: 5px;
+      text-align: center;
+      align-self: center;
+      width: 225px;
+
+      a{
+         font-family: $font-medium;
+         font-size: 14px;
+         line-height: 25px;
+         width: 225px;
+         margin: 2px auto 45px auto;
+         text-align: center;
+         span{
+            color: $purple-gifos;
+            cursor: pointer;
+
+         }
+      }
+   }
 }
