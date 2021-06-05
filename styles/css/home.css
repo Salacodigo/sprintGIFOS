@@ -659,10 +659,14 @@ body.dark .search-section .title-container .welcome-title {
   justify-content: center;
 }
 .gif-search-results .division {
-  display: flex;
+  display: none;
   margin-top: 55px;
   width: 157px;
   margin: 0 auto;
+}
+.gif-search-results .title-container {
+  display: none;
+  justify-content: center;
 }
 .gif-search-results .title-container .title {
   text-align: center;
@@ -675,6 +679,7 @@ body.dark .search-section .title-container .welcome-title {
 }
 .gif-search-results .lorem-container {
   display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
 }
@@ -692,9 +697,9 @@ body.dark .search-section .title-container .welcome-title {
   margin: 65px 0px 60px 0px;
 }
 .gif-search-results .gif-container {
+  display: grid;
   justify-content: center;
   margin: 0 auto;
-  display: grid;
   padding: 0px 21px;
   grid-template-columns: repeat(2, 156px);
   grid-auto-rows: minmax(120px, 130px);
@@ -760,10 +765,11 @@ body.dark .search-section .title-container .welcome-title {
   color: #FFFFFF;
 }
 .gif-search-results .btn-VerMas {
+  display: flex;
+  display: none;
   margin-top: 80px;
   align-self: center;
   width: 127px;
-  display: flex;
   cursor: pointer;
 }
 .gif-search-results .btn-VerMas img {
@@ -782,7 +788,6 @@ body.dark .search-section .title-container .welcome-title {
     justify-content: center;
   }
   .gif-search-results .division {
-    display: flex;
     margin-top: 55px;
     width: 157px;
     margin: 0 auto;
@@ -797,7 +802,6 @@ body.dark .search-section .title-container .welcome-title {
     margin: 65px 0px 60px 0px;
   }
   .gif-search-results .lorem-container {
-    display: flex;
     flex-direction: column;
     justify-content: center;
   }
@@ -815,9 +819,9 @@ body.dark .search-section .title-container .welcome-title {
     margin: 65px 0px 60px 0px;
   }
   .gif-search-results .gif-container {
+    display: grid;
     justify-content: center;
     margin: 0 auto;
-    display: grid;
     padding: 0px 21px;
     grid-template-columns: repeat(3, 220px);
     grid-auto-rows: minmax(170px, 170px);

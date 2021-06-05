@@ -29,8 +29,14 @@ async function buscaPorPalabra(word, verMas=false){
       claseBusqueda.offset = 0;
    }
    await buscarGifs(word);
-   
-   dibujaGifCards(DBgifsBuscados, containerSearch);
+
+
+   if( DBgifsBuscados.length > 0){
+      dibujaGifCards(DBgifsBuscados, containerSearch);
+      SeEncuentranGifsSearch(word); //Controla la aparicion de resultados
+   } else {
+      noSeEncuentranGifsSearch();
+   }
 }
 
 //Trigger de la busqueda por palabra
@@ -94,4 +100,28 @@ function clearInput(){
 async function verMas(){
    let word = inputSearch.value;
    buscaPorPalabra(word, true);
+}
+
+//Muestra el loremContainer para decir que no hay resultados
+ 
+function noSeEncuentranGifsSearch(){
+   
+   division.style.display = "flex";
+   titleContainer.style.display = "flex";
+   titleWord.textContent = 'Lorem Ipsum';
+   loremContainer.style.display = "flex";
+   btnVerMas.style.display = "none";
+   
+}
+
+//Controla la aparicion de resultados
+function SeEncuentranGifsSearch(word){
+   division.style.display = "flex";
+   titleContainer.style.display = "flex";
+   titleWord.textContent = `${word}`;
+   containerSearch.style.display = "grid";
+   btnVerMas.style.display = "flex";
+   
+   //Oculta el lorem container en caso de haberse mostrado antes
+   loremContainer.style.display = "none";
 }
