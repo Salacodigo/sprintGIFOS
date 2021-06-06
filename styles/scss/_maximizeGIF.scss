@@ -9,7 +9,7 @@
    width: 100%;
    height: 100%;
    z-index: 200;
-   background-color: $white-gifos-transparent;
+   background-color: $white-gifos;
 
    .closeBtn{
       cursor: pointer;
@@ -80,6 +80,9 @@
                margin-right: 20px;
                cursor: pointer;
                width: 36px;
+               &:active{
+                  content: url('../../assets/icon-fav-active.svg')
+               }
             }
             
             .downloadBtn{
@@ -204,6 +207,9 @@
                   width: 36px;
                   &:hover{
                      content: url('../../assets/icon-fav-hover.svg')
+                  }
+                  &:active{
+                     content: url('../../assets/icon-fav-active.svg')
                   }
                }
                
