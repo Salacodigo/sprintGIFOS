@@ -13,6 +13,10 @@ function dibujaGifCards(data, container) {
       const gifImage = document.createElement('img');
       gifImage.className = 'gifImage';
       gifImage.setAttribute('src', `${gif.gifPreviewURL}`);
+      gifImage.addEventListener('click', (e) => {
+         e.stopPropagation();
+         maximizeGIF(gif.id);
+      });
 
       //Se crea el contenedor de los botones
       const hoverGif = document.createElement('div');

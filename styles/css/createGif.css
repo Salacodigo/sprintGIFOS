@@ -10,6 +10,10 @@
   list-style: none;
 }
 
+body {
+  min-width: 375px;
+}
+
 .screen-container .screen {
   display: none;
   width: 80%;
