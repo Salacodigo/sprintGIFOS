@@ -10,3 +10,6 @@ function inhabilitaScroll() {
    let y = window.scrollY;
    window.onscroll = function () { window.scrollTo(x, y) };
  }
+
+
+ 

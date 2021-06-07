@@ -158,7 +158,7 @@ function dibujarSugerencias(data, container) {
          alt="look up ${word.name}">
       </div>
       <span data-word="${word.name}">${word.name}</span>`
-
+      
       container.appendChild(li);
    });
 }

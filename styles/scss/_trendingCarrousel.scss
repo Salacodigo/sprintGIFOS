@@ -51,7 +51,7 @@
 
          #control-left{
             display: none;
-            z-index: 1001;
+            z-index: 100;
             padding: 120px 22px 120px 70px;
             
             &:hover{
@@ -61,7 +61,7 @@
 
          #control-right{
             display: none;
-            z-index: 1001;
+            z-index: 100;
             padding: 120px 70px 120px 22px;
             content: url('../../assets/button-slider-right.svg');
             
@@ -164,6 +164,338 @@
    }
 }
 
+
+@media (min-width:768px){
+   .trending-carrousel{
+      background-color: $trending-background;
+      padding-bottom: 82px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+   
+      .trending-title{
+       
+         padding-top: 46px;
+         color: $purple-gifos;
+         font-size: 13px;
+         font-family: $font-bold;
+         font-weight: 700;
+         line-height: 30px;
+         text-align: center;
+         
+      }
+   
+      .description{
+         margin-top: 7px;
+         height: 46px;
+         color: $black-gifos;
+         line-height: 23px;
+         text-align: center;
+         align-items: center;
+      
+         .slice{
+            display: block;
+            font-family: $font-regular;
+            font-size: 16px;      
+         }
+      }
+   
+      .carrousel-container{
+         height: 220px;
+         margin-top: 32px;
+         
+         .static-container{
+            display: flex;
+            align-items: center;
+            height: 220px;
+            
+   
+            .control-trending{
+               background-color: $trending-background;
+               cursor: pointer;
+            }
+   
+            #control-left{
+               display: block;
+               
+               padding: 120px 22px 120px 40px;
+               
+               &:hover{
+                 content: url('../../assets/button-slider-left-hover.svg');
+               }
+            }
+   
+            #control-right{
+               display: block;
+               
+               padding: 120px 40px 120px 22px;
+               content: url('../../assets/button-slider-right.svg');
+               
+               &:hover{
+                 content: url('../../assets/button-slider-right-hover.svg');
+               }
+   
+            }
+   
+            .gif-container{
+               display: flex;
+               overflow-x: scroll;
+               padding-left: 25px;
+               
+               &::-webkit-scrollbar{
+                 display: none;
+               }
+            
+               .gif-card{
+                  display: flex;
+                  justify-content: center;
+                  width: 300px;
+                  min-width: 300px;
+                  margin: 0px 22px 0px 0px;
+                  height: 220px;
+                  cursor: pointer;
+                  
+                  .gifImage{
+                     background-color: $white-gifos;
+                     width: 100%;
+                     height: 100%;
+                  }
+                  
+                  .hoverGif{
+                     display: none;
+                     position: absolute;
+                     background-color: $hoverColor;
+                     width: 100%;
+                     height: 100%;
+                     
+                     .gifButtonContainer{
+                        display: flex;
+                        justify-content: flex-end;
+                        width: 100%;
+                        padding: 10px;
+            
+                        .favoriteBtn, .downloadBtn, .expandBtn{
+                           cursor: pointer;
+                           height: 32px;
+                           width: 32px;
+                           margin-left: 10px;
+            
+                        }
+            
+                        .favoriteBtn{
+                           &:hover{
+                              content: url('../../assets/icon-fav-hover.svg')
+                           }                  
+            
+                        }
+                        
+                        .downloadBtn{
+                           &:hover{
+                              content: url('../../assets/icon-download-hover.svg')
+                           }
+                           
+                        }
+                        
+                        .expandBtn{
+                           &:hover{
+                              content: url('../../assets/icon-max-hover.svg')
+                           }
+                           
+                           
+                        }
+                     }
+            
+                     .gifInformation{
+                        margin-top: 60px;
+            
+                        .gifUser{
+                           margin: 5px 0px;
+                           font-family: $font-regular;
+                           font-size: 13px;
+                           line-height: 15px;
+                           color: $white-gifos;
+                         }
+            
+                         .gifTitle{
+                           font-family: $font-bold;
+                           font-size: 14px;
+                           line-height: 15px;
+                           color: $white-gifos;
+                         }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+
+
+@media (min-width:1440px){.trending-carrousel{
+   background-color: $trending-background;
+   padding-bottom: 82px;
+   width: 100%;
+   display: flex;
+   flex-direction:column;
+
+   .trending-title{
+    
+      padding-top: 46px;
+      color: $purple-gifos;
+      font-size: 13px;
+      font-family: $font-bold;
+      font-weight: 700;
+      line-height: 30px;
+      text-align: center;
+      
+   }
+
+   .description{
+      margin-top: 7px;
+      height: 46px;
+      color: $black-gifos;
+      line-height: 23px;
+      text-align: center;
+      align-items: center;
+   
+      .slice{
+         display: block;
+         font-family: $font-regular;
+         font-size: 16px;      
+      }
+   }
+
+   .carrousel-container{
+      height: 275px;
+      margin-top: 32px;
+      
+      .static-container{
+         display: flex;
+         align-items: center;
+         height: 275px;
+         
+
+         .control-trending{
+            background-color: $trending-background;
+            cursor: pointer;
+         }
+
+         #control-left{
+            display: block;
+            
+            padding: 120px 22px 120px 70px;
+            
+            &:hover{
+              content: url('../../assets/button-slider-left-hover.svg');
+            }
+         }
+
+         #control-right{
+            display: block;
+            
+            padding: 120px 70px 120px 22px;
+            content: url('../../assets/button-slider-right.svg');
+            
+            &:hover{
+              content: url('../../assets/button-slider-right-hover.svg');
+            }
+
+         }
+
+         .gif-container{
+            display: flex;
+            overflow-x: scroll;
+            padding-left: 30px;
+            
+            &::-webkit-scrollbar{
+              display: none;
+            }
+         
+            .gif-card{
+               display: flex;
+               justify-content: center;
+               width: 357px;
+               min-width: 357px;
+               margin: 0px 30px 0px 0px;
+               height: 275px;
+               cursor: pointer;
+               
+               .gifImage{
+                  background-color: $white-gifos;
+                  width: 100%;
+                  height: 100%;
+               }
+               
+               .hoverGif{
+                  display: none;
+                  position: absolute;
+                  background-color: $hoverColor;
+                  width: 100%;
+                  height: 100%;
+                  
+                  .gifButtonContainer{
+                     display: flex;
+                     justify-content: flex-end;
+                     width: 100%;
+                     padding: 10px;
+         
+                     .favoriteBtn, .downloadBtn, .expandBtn{
+                        cursor: pointer;
+                        height: 32px;
+                        width: 32px;
+                        margin-left: 10px;
+         
+                     }
+         
+                     .favoriteBtn{
+                        &:hover{
+                           content: url('../../assets/icon-fav-hover.svg')
+                        }                  
+         
+                     }
+                     
+                     .downloadBtn{
+                        &:hover{
+                           content: url('../../assets/icon-download-hover.svg')
+                        }
+                        
+                     }
+                     
+                     .expandBtn{
+                        &:hover{
+                           content: url('../../assets/icon-max-hover.svg')
+                        }
+                        
+                        
+                     }
+                  }
+         
+                  .gifInformation{
+                     margin-top: 60px;
+         
+                     .gifUser{
+                        margin: 5px 0px;
+                        font-family: $font-regular;
+                        font-size: 13px;
+                        line-height: 15px;
+                        color: $white-gifos;
+                      }
+         
+                      .gifTitle{
+                        font-family: $font-bold;
+                        font-size: 14px;
+                        line-height: 15px;
+                        color: $white-gifos;
+                      }
+                  }
+               }
+            }
+         }
+      }
+   }
+}
+}
 
 
 
