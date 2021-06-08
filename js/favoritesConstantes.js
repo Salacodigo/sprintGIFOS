@@ -1,6 +1,6 @@
 //grid GIFS
 let containerFavorites = document.getElementById('favoritos');
-const division = document.getElementById('division');
+
 const titleContainer = document.getElementById('title-container');
 const titleWord = document.getElementById('title-word');
 const loremContainer = document.getElementById('lorem-container');
