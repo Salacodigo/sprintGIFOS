@@ -216,7 +216,7 @@
             }
    
             #control-left{
-               display: block;
+               display: none;
                
                padding: 120px 22px 120px 40px;
                
@@ -226,7 +226,7 @@
             }
    
             #control-right{
-               display: block;
+               display: none;
                
                padding: 120px 40px 120px 22px;
                content: url('../../assets/button-slider-right.svg');
@@ -332,7 +332,8 @@
 }
 
 
-@media (min-width:1440px){.trending-carrousel{
+@media (min-width:1440px){
+   .trending-carrousel{
    background-color: $trending-background;
    padding-bottom: 82px;
    width: 100%;

@@ -1773,14 +1773,14 @@ body.dark .search-section .title-container .welcome-title {
     cursor: pointer;
   }
   .trending-carrousel .carrousel-container .static-container #control-left {
-    display: block;
+    display: none;
     padding: 120px 22px 120px 40px;
   }
   .trending-carrousel .carrousel-container .static-container #control-left:hover {
     content: url("../../assets/button-slider-left-hover.svg");
   }
   .trending-carrousel .carrousel-container .static-container #control-right {
-    display: block;
+    display: none;
     padding: 120px 40px 120px 22px;
     content: url("../../assets/button-slider-right.svg");
   }

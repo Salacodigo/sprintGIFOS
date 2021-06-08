@@ -32,3 +32,5 @@ let trendingTerms;
 
 //Carrousel Trending GIfs Constants
 const containterTrending = document.getElementById('carrousel');
+const controlLeft = document.getElementById('control-left');
+const controlRight = document.getElementById('control-right');
