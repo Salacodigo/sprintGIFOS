@@ -47,6 +47,7 @@ async function uploadBtnAction() {
    await stopStreamedVideo(video);
    cambioPantalla4();
    let id = await uploadToGiphy(form);
+   cambioPantalla5();
    informacionBotones(id);
    saveCreatedGifInfo();
    cambioPaso6();
@@ -56,41 +57,61 @@ async function uploadBtnAction() {
 //Pedir permisos
 function cambioPantalla2(){
    screenStep1.style.display = "none";
-   screenStep2.style.display = "block";
+   screenStep2.style.display = "flex";
+   stepsContainer.classList.add("one");
 }
 //Muestra el video
 function cambioPantalla3() {
+   //Screens
    screenStep2.style.display = "none";
-   screenStep3.style.display = "block";
-
+   screenStep3.style.display = "flex";
+   //Indicators
+   stepsContainer.classList.remove("one");
+   stepsContainer.classList.add("two");
+   //Buttons
    startBtn.style.display = "none";
-   recordBtn.style.display = "block";
+   recordBtn.style.display = "flex";
 }
 //Volver a la pantalla donde se piden permisos
 function volverPantalla3(){
+   //Screen
    uploadBtn.style.display = 'none';
-   recordBtn.style.display = 'inline';
+   recordBtn.style.display = 'flex';
+   //Repeat button
    repeatRecording.style.display = 'none';
 }
-//GIFO subido con exito
+//Estamos subiendo tu GIFO
 function cambioPantalla4(){
+   //Screens
    screenStep3.style.display = "none";
-   screenStep4.style.display = "block";
+   screenStep4.style.display = "flex";
+   //Indicators
+   stepsContainer.classList.remove("two");
+   stepsContainer.classList.add("three");
+}
+//GIFO subido con exito
+function cambioPantalla5(){
+   screenStep4.style.display = "none";
+   screenStep5.style.display = "flex";
 }
 
 //Al dar clic en record
 function cambioPaso4() {
+   //Buttons
    recordBtn.style.display = "none";
-   finishBtn.style.display = "block";
-   crono.style.display = "block";
+   finishBtn.style.display = "flex";
+   //Cronometer indicator
+   crono.style.display = "flex";
 }
 
 //Al dar clic en Finalizar
 function cambioPaso5() {
+   //Buttons
    finishBtn.style.display = "none";
-   uploadBtn.style.display = "block";
+   uploadBtn.style.display = "flex";
+   //Indicators
    crono.style.display = "none";
-   repeatRecording.style.display = "block";
+   repeatRecording.style.display = "flex";
 }
 
 //Al dar clic en upload
@@ -98,8 +119,8 @@ function cambioPaso6(){
    repeatRecording.style.display = "none";
    uploadBtn.style.display = "none";
 
-   downloadCreatedGif.style.display = "block";
-   linkCreatedGif.style.display = "block";
+   downloadCreatedGif.style.display = "flex";
+   linkCreatedGif.style.display = "flex";
 }
 
 

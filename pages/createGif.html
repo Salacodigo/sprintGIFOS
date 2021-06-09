@@ -11,49 +11,175 @@
 </head>
 
 <body>
-   <h2>Menu</h2>
-   <ul>
-      <li><a href="../pages/index.html">Home</a></li>
-      <li><a href="../pages/favorites.html">Favoritos</a></li>
-      <li><a href="../pages/myGifos.html">MyGifos</a></li>
-      <li><a href="../pages/createGif.html">createGif</a></li>
+   <!-- NAVIGATION MENU -->
+   <nav class="navbar-section" id="home-navbar">
+      <div class="blue-bar"></div>
+      <div class="navbar-container">
+         <!-- GIF LOGO -->
+         <div class="home-img-container">
+            <div class="home-img">
+               <a href="#home-navbar">
+                  <img src="../assets/logo-mobile.svg" id="home-GIFOS-logo" alt="GIFOS Logo">
+               </a>
+            </div>
+         </div>
+         <!-- menu hamburger -->
+         <div class="menu-container">
+            <input type="checkbox" id="menu-drop">
+            <label class="label-menu" for="menu-drop">
+               <div class="menu-checker">
+                  <img class="btn-burguer" src="../assets/burger.svg" id="btn-burguer" alt="menudrop-button">
+                  <img class="btn-burguerClose" src="../assets/close.svg" id="btn-burguerClose"
+                     alt="menudrop-button-close">
+               </div>
+            </label>
+            <div class="input-container" id="input-container-nav">
+               <div class="first-row">
+                  <img src="../assets/icon-search.svg" alt="look up" class="lookup-searchBtn" id="lookup-searchBtn-Nav">
+                  <input type="text" class="input-search" placeholder="Busca GIFOS y más" value=""
+                     id="input-search-Nav">
+                  <img src="../assets/icon-search.svg" alt="look up" class="lookup-open-suggestion"
+                     id="lookup-open-suggestion-Nav">
+                  <img src="../assets/close.svg" alt="look up" class="clear-input" id="clear-input-Nav">
 
-   </ul>
+               </div>
+               <!-- Sugerencias de busqueda -->
+               <hr class="suggestion-division" id="suggestion-division-nav">
+               <ul class="sugerencias-container" id="sugerencias-container-nav">
+               </ul>
+            </div>
 
-   <h1>Crear GIF</h1>
-   <div class="screen-container">
-      <!-- PASO 1 -->
-      <div class="screen scStep1" id="scStep1">Pantalla1 - Aqui podras crear tus propios Gifos</div>
-      <div class="screen scStep2" id="scStep2">Pantalla2 - ¿NOs das acceso a tu camara?</div>
-      <div class="screen scStep3" id="scStep3">Pantalla3 Video
-         <video id="video"></video>
+            <div class="list-menu-container">
+               <ul class="list-menu">
+                  <li>
+                     <a href="../pages/index.html" class="link-menu">
+                        <span>Home</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="../pages/favorites.html" class="link-menu">
+                        <span>Favoritos</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="../pages/myGifos.html" class="link-menu">
+                        <span>Mis GIFOS</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="../pages/createGif.html" class="link-menu">
+                        <span id="crear-gif-link">Crear Gif</span>
+                        <img id="crear-gif-img" src="../assets/button-crear-gifo.svg" alt="make a GIFO">
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
       </div>
-      <div class="screen scStep4" id="scStep4">Pantalla4 - GIFO subido con exito</div>
+   </nav>
 
-      <!-- Botones de la pantalla -->
-      <img class="downloadBtn" src="../assets/icon-download.svg" alt="download GIF button" id="downloadCreatedGif">
-      <img class="linkBtn" src="../assets/icon-link-normal.svg" alt="copy link button" id="linkCreatedGif">
-
-
-
-      <!-- Indicadores -->
-      <div class="steps-container">
-         <img class="step stepOne" src="../assets/paso-a-paso1.svg" id="step-one" alt="step one indicator">
-         <img class="step stepTwo" src="../assets/paso-a-paso2.svg" id="step-two" alt="step two indicator">
-         <img class="step stepThree" src="../assets/paso-a-paso3.svg" id="step-three" alt="step three indicator">
-         <div class="crono" id="crono">00:00:00</div>
-         <div class="repeat" id="repeatRecording">REPETIR CAPTURA</div>
+   <section class="createGif-section">
+      <!-- Imagen Camara -->
+      <div class="camera-container">
+         <img src="../assets/camara.svg" alt="Video camera" id="camera-img">
+         <img src="../assets/Path.svg" alt="light camera" id="camera-light">
       </div>
+      <div class="screen-container">
 
-      <!-- Botones -->
-      <div class="button-container">
-         <img src="../assets/CTA-comenzar.svg" alt="start button" class="createBtn startBtn" id="startBtn">
-         <img src="../assets/CTA-record.svg" alt="record button" class="createBtn recordBtn" id="recordBtn">
-         <img src="../assets/CTA-finalizar.svg" alt="finish button" class="createBtn finishBtn" id="finishBtn">
-         <img src="../assets/CTA-upload.svg" alt="upload button" class="createBtn uploadBtn" id="uploadBtn">
+         <!-- PASO 1 -->
+         <div class="screen corners" id="screen">
+            <div class="corner-box">
+               <div class="corner1"></div>
+               <div class="corner2"></div>
+               <div class="corner3"></div>
+               <div class="corner4"></div>
+            </div>
+         </div>
+         <div class="screen scStep1" id="scStep1">
+            <div class="content">
+               <h2 class="title">Aquí podrás <br>crear tus propios <span>GIFOS</span></h2>
+               <p>¡Crea tu GIFO en sólo 3 pasos!<br>
+                  (sólo necesitas una cámara para grabar un video)</p>
+            </div>
+         </div>
+         <div class="screen scStep2" id="scStep2">
+            <div class="content">
+               <h2 class="title">¿Nos das acceso <br> a tu cámara?</h2>
+               <p>El acceso a tu camara será válido sólo por el tiempo en el que estés creando el GIFO.</p>
+            </div>
+         </div>
+         <div class="screen scStep3" id="scStep3">
+            <video id="video"></video>
+         </div>
+         <div class="screen scStep4" id="scStep4">
+            <div class="content">
+               <img src="../assets/loader.svg" class="load-logo" alt="load GIFO background">
+               <p>Estamos subiendo tu GIFO</p>
+            </div>
+         </div>
+         <div class="screen scStep5" id="scStep5">
+            <div class="content">
+               <img src="../assets/ok.svg" class="load-logo" alt="load GIFO background">
+               <p>GIFO subido con éxito</p>
+               <div class="btnContainerStep5">
+                  <img class="downloadBtn" src="../assets/icon-download.svg" alt="download GIF button"
+                     id="downloadCreatedGif">
+                  <img class="linkBtn" src="../assets/icon-link-normal.svg" alt="copy link button" id="linkCreatedGif">
+               </div>
+            </div>
+         </div>
+
+         <!-- Indicadores -->
+         <div class="steps-container" id="steps-container">
+            <img class="step stepOne" src="../assets/paso-a-paso1.svg" id="step-one" alt="step one indicator">
+            <img class="step stepTwo" src="../assets/paso-a-paso2.svg" id="step-two" alt="step two indicator">
+            <img class="step stepThree" src="../assets/paso-a-paso3.svg" id="step-three" alt="step three indicator">
+            <div class="crono" id="crono">00:00:00</div>
+            <div class="repeat" id="repeatRecording">REPETIR CAPTURA</div>
+         </div>
+
+         <!-- Barra divisora -->
+         <div class="menu-bar"></div>
+
+
+         <!-- Botones -->
+         <div class="button-container">
+            <img src="../assets/CTA-comenzar.svg" alt="start button" class="createBtn startBtn" id="startBtn">
+            <img src="../assets/CTA-record.svg" alt="record button" class="createBtn recordBtn" id="recordBtn">
+            <img src="../assets/CTA-finalizar.svg" alt="finish button" class="createBtn finishBtn" id="finishBtn">
+            <img src="../assets/CTA-upload.svg" alt="upload button" class="createBtn uploadBtn" id="uploadBtn">
+         </div>
+
       </div>
+      <div class="tape-container">
+         <img src="../assets/pelicula.svg" alt="Tape" id="tape-img">
+      </div>
+   </section>
 
-   </div>
+
+   <!-- FOOTER -->
+   <footer class="footer-container" id="footer">
+      <div class="top-footer">
+         <div class="title">
+            <span>Compartir en:</span>
+         </div>
+         <div class="social-logos">
+            <div class="social-icon facebook">
+               <img alt="Facebook icon">
+            </div>
+            <div class="social-icon twitter">
+               <img src="../assets/icon-twitter.svg" alt="Twitter icon">
+            </div>
+            <div class="social-icon instagram">
+               <img src="../assets/icon_instagram.svg" alt="Instagram icon">
+            </div>
+         </div>
+         <div class="text-container">
+            <span>© GIFOS 2020 All Rights Reserved.</span>
+         </div>
+      </div>
+      <div class="menu-bar"></div>
+   </footer>
 
    <script src="../js/GIF.js"></script>
    <script src="../js/Busqueda.js"></script>

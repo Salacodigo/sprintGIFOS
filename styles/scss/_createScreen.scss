@@ -1,81 +1,713 @@
 @import 'variables';
 
+.createGif-section{
+   display: flex;
+   flex-direction: column;
 
-.screen-container{
-   .screen{
-      display: none;
-      width: 80%;
-      height: 300px;
-      border: $test;
-      background-color: $purple-gifos;
-      color: $white-gifos;
+   .camera-container{
+      position: relative;
+      align-self: center;
+      width: 80px;
+      margin: 20px;
+      height: 100px;
+      
+      #camera-img{
+         position: absolute;
+         top: 0px;
+         left: unset;
+         right: unset;
+         width: 86px;
+         height: auto;
+         
+
+      }
+
+      #camera-light{
+         position: absolute;
+         top: 18px;
+         left: 86px;
+         right: unset;
+         height: 80px;
+         width: auto;
+      }
    }
 
-   .scStep1{
-      display: block;
-   }
+   .screen-container{
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      width: 100%;
+      
 
-   .scStep2{
-      border: $test;
-   }
+      .screen{
+         display: none;
+         flex-direction: column;
+         max-width: 688px;
+         width: 100%;
+         height: 300px;
+         border: 1px solid $purple-gifos;
+         background-color: $white-gifos;
+         margin: 5px auto 0px;
+         text-align: center;
+         position: relative;
+
+
+
+         .title{
+            color: $purple-gifos;
+            font-size: 25px;
+            line-height: 35px;
+            font-weight: 700;
+            font-family: $font-bold;
+            width: 230px;
+            margin: 50px auto 15px auto;
+            
+            span{
+              color: $green-gifos;
+            }
+          }
+          p{    
+            color: $black-gifos;
+            font-size: 15px;
+            line-height: 25px;
+            font-weight: 500;
+            width: 230px;
+            font-family: $font-regular;
+            margin: 0px auto;
+            
+          }
+      }
+
+      .corners{
+         display: flex;
+         justify-self: center;
+         position: relative;
+         margin: 0px auto -300px auto;
+         z-index: 150;
+         border: unset;
+         background-color: unset;
+         right: 0px;
+
+
+         .corner-box{
+            position: absolute;
+            width: 90%;
+            max-width: 596px;
+            height: 270px;
+            top: 20px;
+            left: 15px;
+            right: unset;
+            
+            .corner1, .corner2, .corner3, .corner4{
+              position: absolute;
+              width: 27px;
+              height: 27px;
+              border-top: 1px solid $green-gifos;
+              border-left: 1px solid $green-gifos;
+    
+            }
+            .corner1{
+              top: 0px;
+              bottom: unset;
+              left: 0px;
+              right: unset;
+              transform: rotate(0deg);
+            }
+            .corner2{
+              top: 0px;
+              bottom: 0px;
+              left: unset;
+              right: 0px;
+              transform: rotate(90deg);
+            }
+            .corner3{
+              top: unset;
+              bottom: 0px;
+              left: 0px;
+              right: unset;
+              transform: rotate(270deg);
+            }
+            .corner4{
+              top: unset;
+              bottom: 0px;
+              left: unset;
+              right: 0px;
+              transform: rotate(180deg);
+            }
+    
+          }
+      }
+
+      .scStep1{
+         display: flex;
+      }
+
+      .scStep2{
+         
+      }
+
+      .scStep3{
+         justify-content:center;
+         align-items: center;
+         video {
+            width: 100%;
+            max-width: 480px;
+            height: 100%;
+            max-height: 320px;
+         }
+      }
+
+      .scStep4, .scStep5{
+         display: none;
+         position: relative;
+         flex-direction: column;
+         justify-content: center;
+         z-index: 100;
+         .content{
+            z-index: 200;
+               display: flex;
+               flex-direction: column;
+               height: 100%;
+               width: 100%;
+               margin: 0px auto;
+               align-self: center;
+               background-color: $menu-purple;
+               justify-self: center;
+               justify-content: center;
+               position: relative;
+
+            img{
+               width: 22px;
+               height: auto;
+               align-self: center;
+            }
+            p{
+               align-self: center;
+               margin: 10px;
+               text-align: center;
+               color: $white-gifos;
+            }
+         }
+         
+         .btnContainerStep5{
+            display: flex;
+            position: absolute;
+            left: unset;
+            right: 10px;
+            top: 12px;
    
-   .scStep3{
-      video {
+            .downloadBtn, .linkBtn{
+               cursor: pointer;
+               width: 32px;
+               margin-right: 10px;
+               height: auto;
+            }
+            .downloadBtn{
+               &:hover{
+                  content: url('../../assets/icon-download-hover.svg')
+               }
+            }
+            .linkBtn{
+               &:hover{
+                  content: url('../../assets/icon-link-hover.svg')
+               }
+            }
+         }
+      }
+
+
+      .steps-container{
+         margin: 20px;
+         display: flex;
+         justify-content: center;
+
+         .step{
+            margin: 5px;
+         }
+
+         .stepOne{
+
+            
+         }
+         
+         .stepTwo{
+
+         }
+
+         .stepThree{
+
+         }
+
+         &.one {
+            .stepOne{
+               content: url('../../assets/paso-a-paso-hover.svg');
+            }
+         }
+
+         &.two {
+            .stepTwo{
+               content: url('../../assets/paso-a-paso-hover2.svg');
+            }
+         }
+
+         &.three {
+            .stepThree{
+               content: url('../../assets/paso-a-paso-hover3.svg');
+            }
+         }
+
+
+
+         .clock{
+            display: none;
+            margin: 5px;
+            align-self: center;
+            
+         }
+         
+         .crono{
+            display: none;
+            color: $purple-gifos;
+            font-size: 16px;
+            line-height: 25px;
+            font-weight: 400;
+            font-family: $font-bold;
+            margin: 10px;
+            align-items: center;
+    
+         }
+         .repeat{
+            display: none;
+            color: $purple-gifos;
+            font-size: 13px;
+            font-weight: 400;
+            font-family: $font-bold;
+            align-items: center;
+            border-bottom: 3px solid $white-gifos;
+            margin: 10px;
+            cursor: pointer;
+            
+            &:hover{
+               border-bottom: 3px solid $purple-gifos;
+               cursor: pointer;
+            }
+         }
+         
+      }
+
+      .menu-bar{
+         width: 100%;
+         height: 5px;
+         background-color: $purple-gifos;
+         
+       }
+
+      .button-container{
+         display: flex;
+         margin: 20px 5px;
+         cursor: pointer;
+         justify-content: center;
+
+         .createBtn{
+            display: none;
+            
+         }
+
+         .startBtn{
+            display: flex;
+            &:hover{
+               content: url('../../assets/CTA-comenzar-hover.svg')
+            }
+         }
+
+         .recordBtn{
+            &:hover{
+               content: url('../../assets/CTA-record-hover.svg')
+            }
+         }
+   
+         .finishBtn{
+            &:hover{
+               content: url('../../assets/CTA-finalizar-hover.svg')
+            }
+         }
+
+         .uploadBtn{
+            &:hover{
+               content: url('../../assets/CTA-upload-hover.svg')
+            }
+         }
+
+
+      }
+
+
+
+
+   }
+
+   .tape-container{
+      align-self: center;
+      width: 80px;
+      margin: 20px;
+
+      img{
          width: 100%;
          height: 100%;
       }
    }
-   
-   .scStep4{
-      border: $test;
-      
-   }
-
-   .downloadBtn, .linkBtn{
-      display: none;
-      cursor: pointer;
-   }
-
-   .steps-container{
-      margin: 20px;
-      display: flex;
-
-      .step{
-         margin: 5px;
-      }
-      
-      .clock{
-         display: none;
-         margin: 5px;
-         
-      }
-      
-      .repeat{
-         display: none;
-         margin: 5px;
-         cursor: pointer;
-      }
-      
-   }
-   
-   .button-container{
-      display:flex;
-      margin: 5px;
-      cursor: pointer;
-
-      .createBtn{
-         display: none;
-      }
-
-      .startBtn{
-         display: block;
-      }
-
-
-   }
-
-
-
 
 }
 
+@media (min-width:1440px){
+   .createGif-section{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+   
+      .camera-container{
+         align-self: flex-start;
+         width: 80px;
+         margin: 0px;
+         min-width: 376px;
+         height: 100%;
+         position: relative;
+         
+         
+         #camera-img{
+            position: absolute;
+            top: 119px;
+            left: unset;
+            right: 91px;
+            width: 116px;
+            height: auto;
+         }
+
+         #camera-light{
+            position: absolute;
+            top: 145px;
+            left: unset;
+            right: 28px;
+            height: 105px;
+            width: auto;
+         }
+      }
+   
+      .screen-container{
+         display: flex;
+         flex-direction: column;
+         align-self: center;
+         min-width: 796px;
+         
+         
+
+         .screen{
+            display: none;
+            max-width: 688px;
+            height: 390px;
+            border: 1px solid $purple-gifos;
+            background-color: $white-gifos;
+            margin: 5px auto 0px;
+            text-align: center;
+
+            .content{
+               display: flex;
+               flex-direction: column;
+               max-height: 320px;
+               max-width: 480px;
+               margin: 50px auto;
+               align-self: center;
+               justify-self: center;
+               
+               .title{
+                  color: $purple-gifos;
+                  font-size: 25px;
+                  line-height: 35px;
+                  font-weight: 700;
+                  font-family: $font-bold;
+                  width: 230px;
+                  margin: 50px auto 15px auto;
+                  
+                  span{
+                    color: $green-gifos;
+                  }
+                }
+                p{    
+                  color: $black-gifos;
+                  font-size: 15px;
+                  line-height: 25px;
+                  font-weight: 500;
+                  width: 230px;
+                  font-family: $font-regular;
+                  margin: 0px auto;
+                  
+                }
+            }
+   
+         }
+
+         .corners{
+            display: flex;
+            justify-self: center;
+            position: relative;
+            margin: 0px auto -390px auto;
+            z-index: 150;
+            border: unset;
+            background-color: unset;
+            right: 0px;
+            
+   
+            .corner-box{
+               position: absolute;
+               width: 95%;
+               max-width: 650px;
+               height: 360px;
+               top: 20px;
+               left: 20px;
+               right: auto;
+               
+               .corner1, .corner2, .corner3, .corner4{
+                 position: absolute;
+                 width: 27px;
+                 height: 27px;
+                 border-top: 1px solid $green-gifos;
+                 border-left: 1px solid $green-gifos;
+       
+               }
+               .corner1{
+                 top: 0px;
+                 bottom: unset;
+                 left: 0px;
+                 right: unset;
+                 transform: rotate(0deg);
+               }
+               .corner2{
+                 top: 0px;
+                 bottom: 0px;
+                 left: unset;
+                 right: 0px;
+                 transform: rotate(90deg);
+               }
+               .corner3{
+                 top: unset;
+                 bottom: 0px;
+                 left: 0px;
+                 right: unset;
+                 transform: rotate(270deg);
+               }
+               .corner4{
+                 top: unset;
+                 bottom: 0px;
+                 left: unset;
+                 right: 0px;
+                 transform: rotate(180deg);
+               }
+       
+             }
+         }
+   
+         .scStep1{
+            display: flex;
+            
+         }
+   
+         .scStep2{
+            
+         }
+   
+         .scStep3{
+            video {
+               width: 100%;
+               height: 100%;
+            }
+         }
+   
+         .scStep4, .scStep5{
+            display: none;
+            flex-direction: column;
+            position: relative;
+            justify-content: center;
+            z-index: 100;
+            
+            .content{
+               z-index: 200;
+               display: flex;
+               flex-direction: column;
+               height: 320px;
+               width: 480px;
+               margin: 50px auto;
+               align-self: center;
+               background-color: $menu-purple;
+               justify-self: center;
+               justify-content: center;
+               position: relative;
+
+               img{
+                  width: 22px;
+                  height: auto;
+                  align-self: center;
+               }
+               p{
+                  align-self: center;
+                  margin: 10px auto;
+                  text-align: center;
+                  color: $white-gifos;
+               }
+               .btnContainerStep5{
+                  display: flex;
+                  position: absolute;
+                  left: unset;
+                  right: 2px;
+                  top: 12px;
+         
+                  .downloadBtn, .linkBtn{
+                     cursor: pointer;
+                     width: 32px;
+                     margin-right: 10px;
+                     height: auto;
+                  }
+   
+               }
+            }
+   
+
+            
+         }
+   
+   
+         .steps-container{
+            display: flex;
+            margin: 20px 0px 20px 42%;
+            justify-content: unset;
+            
+            
+   
+            .step{
+               margin: 5px;
+            }
+   
+            .stepOne{
+   
+               
+            }
+            
+            .stepTwo{
+   
+            }
+   
+            .stepThree{
+   
+            }
+   
+            &.one {
+               .stepOne{
+                  content: url('../../assets/paso-a-paso-hover.svg');
+               }
+            }
+   
+            &.two {
+               .stepTwo{
+                  content: url('../../assets/paso-a-paso-hover2.svg');
+               }
+            }
+   
+            &.three {
+               .stepThree{
+                  content: url('../../assets/paso-a-paso-hover3.svg');
+               }
+            }
+            
+            .crono{
+               display: none;
+               color: $purple-gifos;
+               font-size: 16px;
+               line-height: 25px;
+               font-weight: 400;
+               font-family: $font-bold;
+               margin: 10px 0px 10px 210px;
+               align-items: center;
+       
+            }
+            .repeat{
+               display: none;
+               color: $purple-gifos;
+               font-size: 13px;
+               font-weight: 400;
+               font-family: $font-bold;
+               align-items: center;
+               border-bottom: 3px solid $white-gifos;
+               margin: 10px 0px 10px 155px;
+               cursor: pointer;
+               
+               &:hover{
+                  border-bottom: 3px solid $purple-gifos;
+                  cursor: pointer;
+               }
+            }
+            
+         }
+   
+         .button-container{
+            display:flex;
+            margin: 20px 5px;
+            cursor: pointer;
+            justify-content: center;
+   
+            .createBtn{
+               display: none;
+               
+            }
+   
+            .startBtn{
+               display: flex;
+               &:hover{
+                  content: url('../../assets/CTA-comenzar-hover.svg')
+               }
+            }
+   
+            .recordBtn{
+               &:hover{
+                  content: url('../../assets/CTA-record-hover.svg')
+               }
+            }
+      
+            .finishBtn{
+               &:hover{
+                  content: url('../../assets/CTA-finalizar-hover.svg')
+               }
+            }
+   
+            .uploadBtn{
+               &:hover{
+                  content: url('../../assets/CTA-upload-hover.svg')
+               }
+            }
+   
+   
+         }
+   
+   
+   
+   
+      }
+   
+      .tape-container{
+         align-self: flex-start;
+         min-width: 376px;
+         margin: 0px;
+         height: 100%;
+         position: relative;
+         
+         
+   
+         #tape-img{
+            position: absolute;
+            top: 382px;
+            left: 0px;
+            width: 130px;
+            height: auto;
+         }
+      }
+   
+   }
+}

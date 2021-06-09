@@ -26,7 +26,7 @@ async function loadMyGifos() {
    loadEventListenersMyGifos();
 }
 
-function verMasAction(){
+function verMas(){
    console.log(BDcreatedGifs);
 }
 
