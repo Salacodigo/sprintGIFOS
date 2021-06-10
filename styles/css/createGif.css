@@ -396,7 +396,7 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
     top: 25px;
     right: unset;
     left: 343px;
-    z-index: 400;
+    z-index: 601;
     background-color: #FFFFFF;
     border-radius: 25px;
     border: 2px solid #572EE5;
@@ -405,10 +405,18 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
     width: 90%;
     max-width: 334px;
   }
+  body.dark .navbar-section .navbar-container .menu-container .input-container {
+    background-color: #37383C;
+    border: 2px solid #FFFFFF;
+  }
   .navbar-section .navbar-container .menu-container .input-container .first-row {
     display: flex;
     align-items: center;
     width: 100%;
+  }
+  body.dark .navbar-section .navbar-container .menu-container .input-container .first-row {
+    background-color: #37383C;
+    color: #9CAFC3;
   }
   .navbar-section .navbar-container .menu-container .input-container .first-row .lookup-searchBtn,
 .navbar-section .navbar-container .menu-container .input-container .first-row .lookup-open-suggestion,
@@ -422,6 +430,9 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   .navbar-section .navbar-container .menu-container .input-container .first-row .lookup-searchBtn {
     order: 1;
     visibility: hidden;
+  }
+  body.dark .navbar-section .navbar-container .menu-container .input-container .first-row .lookup-searchBtn {
+    content: url(../../assets/icon-search-mod-noc.svg);
   }
   .navbar-section .navbar-container .menu-container .input-container .first-row .input-search {
     order: 2;
@@ -437,17 +448,27 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
     border: hidden;
     cursor: pointer;
   }
+  body.dark .navbar-section .navbar-container .menu-container .input-container .first-row .input-search {
+    background-color: #37383C;
+    color: #9CAFC3;
+  }
   .navbar-section .navbar-container .menu-container .input-container .first-row .input-search:focus {
     color: #000000;
   }
   .navbar-section .navbar-container .menu-container .input-container .first-row .lookup-open-suggestion {
     order: 3;
   }
+  body.dark .navbar-section .navbar-container .menu-container .input-container .first-row .lookup-open-suggestion {
+    content: url(../../assets/icon-search-mod-noc.svg);
+  }
   .navbar-section .navbar-container .menu-container .input-container .first-row .clear-input {
     order: 4;
     width: 10px;
     height: 10px;
     display: none;
+  }
+  body.dark .navbar-section .navbar-container .menu-container .input-container .first-row .clear-input {
+    content: url(../../assets/close-modo-noct.svg);
   }
   .navbar-section .navbar-container .menu-container .input-container .suggestion-division {
     display: none;
@@ -471,6 +492,9 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
     width: 12px;
     height: 12px;
     margin-left: 10px;
+  }
+  body.dark .navbar-section .navbar-container .menu-container .input-container .sugerencias-container .suggestion .lookup-suggestion {
+    content: url(../../assets/icon-search-mod-noc.svg);
   }
   .navbar-section .navbar-container .menu-container .input-container .sugerencias-container .suggestion .lookup-suggestion .lookup-suggestion-img {
     object-fit: cover;

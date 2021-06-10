@@ -477,7 +477,7 @@
                top: 25px;
                right: unset;
                left: 343px;
-               z-index: 400 ;
+               z-index: 601;
                background-color: $white-gifos;
                border-radius: 25px;
                border: 2px solid $purple-gifos;
@@ -485,11 +485,21 @@
                margin: 0 auto;
                width: 90%;
                max-width: 334px;
+               body.dark & {
+                  background-color: $dark-background;
+                  border: 2px solid $white-gifos;
+               }
             
                .first-row{
                   display: flex;
                   align-items: center;
                   width: 100%;
+
+                  body.dark & {
+                     background-color: $dark-background;
+                     color: $division-bar;
+                  }
+
                   .lookup-searchBtn,
                   .lookup-open-suggestion,
                   .clear-input{
@@ -503,6 +513,9 @@
                   .lookup-searchBtn{
                      order: 1;
                      visibility: hidden;
+                     body.dark & {
+                        content: url(../../assets/icon-search-mod-noc.svg);
+                     }
                   }
                   .input-search{
                      order: 2;
@@ -517,6 +530,10 @@
                      font-size: 14px;
                      border: hidden;
                      cursor: pointer;
+                     body.dark & {
+                        background-color: $dark-background;
+                        color: $division-bar;
+                     }
                      
                      
                      &:focus{
@@ -525,6 +542,9 @@
                   }
                   .lookup-open-suggestion{
                      order: 3;
+                     body.dark & {
+                        content: url(../../assets/icon-search-mod-noc.svg);
+                     }
                      
                   }
                   .clear-input{
@@ -532,6 +552,9 @@
                      width: 10px;
                      height: 10px;
                      display: none;
+                     body.dark & {
+                        content: url(../../assets/close-modo-noct.svg);
+                     }
                   }
                }
                .suggestion-division{
@@ -559,6 +582,10 @@
                         width: 12px;
                         height: 12px;
                         margin-left: 10px;
+
+                        body.dark & {
+                           content: url(../../assets/icon-search-mod-noc.svg);
+                        }
                         
                         .lookup-suggestion-img{
                            object-fit: cover;
