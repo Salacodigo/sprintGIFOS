@@ -9,7 +9,6 @@
    <link rel="shortcut icon" href="../assets/logo-mobile.svg" />
    <link rel="stylesheet" href="../styles/css/createGif.css">
 </head>
-
 <body>
    <!-- NAVIGATION MENU -->
    <nav class="navbar-section" id="home-navbar">
@@ -77,7 +76,7 @@
          </div>
       </div>
    </nav>
-
+   <!-- CREATE GIF SECTION -->  
    <section class="createGif-section">
       <!-- Imagen Camara -->
       <div class="camera-container">
@@ -87,8 +86,7 @@
          <img src="../assets/Path.svg" alt="light camera" id="camera-light">
       </div>
       <div class="screen-container">
-
-         <!-- PASO 1 -->
+         <!-- CORNERS -->
          <div class="screen corners" id="screen">
             <div class="corner-box">
                <div class="corner1"></div>
@@ -97,6 +95,7 @@
                <div class="corner4"></div>
             </div>
          </div>
+         <!-- PASO 1 -->
          <div class="screen scStep1" id="scStep1">
             <div class="content">
                <h2 class="title">Aquí podrás <br>crear tus propios <span>GIFOS</span></h2>
@@ -104,21 +103,25 @@
                   (sólo necesitas una cámara para grabar un video)</p>
             </div>
          </div>
+         <!-- PASO 2 -->
          <div class="screen scStep2" id="scStep2">
             <div class="content">
                <h2 class="title">¿Nos das acceso <br> a tu cámara?</h2>
                <p>El acceso a tu camara será válido sólo por el tiempo en el que estés creando el GIFO.</p>
             </div>
          </div>
+         <!-- PASO 3 -->
          <div class="screen scStep3" id="scStep3">
             <video id="video"></video>
          </div>
+         <!-- PASO 4 -->
          <div class="screen scStep4" id="scStep4">
             <div class="content">
                <img src="../assets/loader.svg" class="load-logo" alt="load GIFO background">
                <p>Estamos subiendo tu GIFO</p>
             </div>
          </div>
+         <!-- PASO 5 -->
          <div class="screen scStep5" id="scStep5">
             <div class="content">
                <img src="../assets/ok.svg" class="load-logo" alt="load GIFO background">
@@ -130,8 +133,7 @@
                </div>
             </div>
          </div>
-
-         <!-- Indicadores -->
+         <!-- Indicadores (NUMEROS)-->
          <div class="steps-container" id="steps-container">
             <img class="step stepOne" src="../assets/paso-a-paso1.svg" id="step-one" alt="step one indicator">
             <img class="step stepTwo" src="../assets/paso-a-paso2.svg" id="step-two" alt="step two indicator">
@@ -139,11 +141,8 @@
             <div class="crono" id="crono">00:00:00</div>
             <div class="repeat" id="repeatRecording">REPETIR CAPTURA</div>
          </div>
-
          <!-- Barra divisora -->
          <div class="menu-bar"></div>
-
-
          <!-- Botones -->
          <div class="button-container">
             <img src="../assets/CTA-comenzar.svg" alt="start button" class="createBtn startBtn" id="startBtn">
@@ -151,14 +150,11 @@
             <img src="../assets/CTA-finalizar.svg" alt="finish button" class="createBtn finishBtn" id="finishBtn">
             <img src="../assets/CTA-upload.svg" alt="upload button" class="createBtn uploadBtn" id="uploadBtn">
          </div>
-
       </div>
       <div class="tape-container">
          <img src="../assets/pelicula.svg" alt="Tape" id="tape-img">
       </div>
    </section>
-
-
    <!-- FOOTER -->
    <footer class="footer-container" id="footer">
       <div class="top-footer">
@@ -182,24 +178,18 @@
       </div>
       <div class="menu-bar"></div>
    </footer>
-
    <script src="../js/GIF.js"></script>
    <script src="../js/Busqueda.js"></script>
    <script src="../js/storage.js"></script>
    <script src="../js/downloadGif.js"></script>
-
    <script src="../js/homeBuscar.js"></script>
    <script src="../js/createGifConstantes.js"></script>
    <script src="../js/createRecordGIF.js"></script>
    <script src="../js/createGifEventListeners.js"></script>
-
    <!-- UI scripts -->
    <script src="../js/createGifFuncionalidad.js"></script>
    <script src="../js/modoNocturno.js"></script>
-
    <!-- WEB RTC -->
    <script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
-
 </body>
-
 </html>

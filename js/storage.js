@@ -3,8 +3,10 @@
 let DBgifsBuscados = [];
 let BDtrendingGifs = [];
 let BDgifsFavoritos = [];
+let BDgifsFavoritosPorDibujar = [];
 let BDtrendingTerms = [];
 let BDcreatedGifs = [];
+let BDcreatedGifsPorDibujar = [];
 let BDcreatedGifsId = [];
 //Para saber a qué arreglo pertenece el GIFS
 let arregloGIF = [];

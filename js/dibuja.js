@@ -77,9 +77,7 @@ function generaBtnFavorite(gif) {
       e.stopPropagation();
       let id = `${gif.gifId}`;
       addFavorite(id); //Controla la BD de favoritos
-      console.log('presionado')
    })
-
    return btnFavorite;
 }
 

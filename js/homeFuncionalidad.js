@@ -90,7 +90,6 @@ async function sugerenciasNav() {
    let word = inputSearchNav.value;
    let palabrasSugeridas = await buscarSugerencias(word);
    limpiarContenedor(sugerenciasContainerNav);
-   console.log('Dibujar sugerenciasContainerNav')
    dibujarSugerencias(palabrasSugeridas, sugerenciasContainerNav);
 
    let palabrasEnLista = document.querySelectorAll('.suggestion')
@@ -113,14 +112,11 @@ function mostrarSugerencias() {
 
 }
 function mostrarSugerenciasNav() {
-   console.log('mostrarSugerenciasNav');
    //Input navBar
    sugerenciasContainerNav.style.display = "block";
    lookupSearchBtnNav.style.visibility = "visible";
    clearInputBtnNav.style.display = "flex";
    lookupOpenSuggestionNav.style.display = "none";
-   
-
 }
 
 function ocultarSugerencias() {

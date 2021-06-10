@@ -14,36 +14,30 @@ let s = 0;
 let time = '';
 
 async function repeatRecordingAction() {
-   console.log('repeatRecordingAction');
-   
    await requestCameraAccess();
    volverPantalla3();
    restartCronometer();
 }
 
 async function startBtnAction() {
-   console.log('startBtnAction');
    cambioPantalla2();
    await requestCameraAccess();
    cambioPantalla3();
 }
 
 async function recordBtnAction() {
-   console.log('recordBtnAction');
    await recording();
    startCronometer();
    cambioPaso4();
 }
 
 async function finishBtnAction() {
-   console.log('finishBtnAction');
    stopCronometer();
    await stopRecording();
    cambioPaso5();
 }
 
 async function uploadBtnAction() {
-   console.log('uploadBtnAction');
    await stopStreamedVideo(video);
    cambioPantalla4();
    let id = await uploadToGiphy(form);
@@ -140,13 +134,11 @@ function informacionBotones(id){
 }
 
 async function downloadCreatedGifAction(e){
-   console.log('e:',e)
    let id = e.target.getAttribute('data-id');
    await descargaGIF('createdGif', id);
 }
 
 function linkCreatedGifAction(e){
-   console.log('e:',e)
    let url = e.target.getAttribute('url');
    window.open(url,"ventana1","width=1440,height=720,scrollbars=NO")
 }
@@ -156,8 +148,6 @@ async function saveCreatedGifInfo(){
    let ids = BDcreatedGifsId;
 
    let dataJSON = await getGIfsById(ids);
-
-   console.log('dataJSON',dataJSON)
 
    dataJSON.data.forEach(gif => {
 

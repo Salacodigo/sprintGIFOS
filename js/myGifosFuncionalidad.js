@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+//Controla la cantidad de gifs dibujados
+let dibujarHasta = 0;
+let cantidadVerMas = 12; //Cantidad de GIFs adicionales al darle click al boton ver mas
+
+
 async function loadTrending() {
    
    await buscarTrendingGifs();
@@ -12,11 +17,9 @@ async function loadTrending() {
 
 async function loadMyGifos() {
    await loadTrending();
-   limpiarContenedor(containerMyGifos);
    let cantidadMyGIFOS = BDcreatedGifs.length;
    if (cantidadMyGIFOS > 0) {
-      
-      dibujaGifCards(BDcreatedGifs, containerMyGifos);
+      verMas();
       SeEncuentranGifsCreados();
       //Controla la aparicion de resultados
    } else {
@@ -26,8 +29,25 @@ async function loadMyGifos() {
    loadEventListenersMyGifos();
 }
 
-function verMas(){
-   console.log(BDcreatedGifs);
+function verMas() {
+   let CantidadFavoritos = BDcreatedGifs.length;
+   dibujarHasta += cantidadVerMas;
+   if (dibujarHasta >= CantidadFavoritos){
+      dibujarHasta = CantidadFavoritos;
+      //Esconde el boton ver más si no hay mas GIfs por mostrar
+      btnVerMas.style.visibility = "hidden";
+   }
+   
+   buildBDcreatedGifsADibujar( dibujarHasta );
+   limpiarContenedor(containerMyGifos);
+   dibujaGifCards(BDcreatedGifsPorDibujar, containerMyGifos);
+}
+
+function buildBDcreatedGifsADibujar( cantidad ){
+   BDcreatedGifsPorDibujar = [];
+   for (let i = 0; i < cantidad; i++ ){
+      BDcreatedGifsPorDibujar.push(BDcreatedGifs[i]);
+   }
 }
 
 //Muestra el loremContainer para decir que no hay resultados
