@@ -39,6 +39,9 @@ body.dark .navbar-section .blue-bar {
 .navbar-section .navbar-container {
   display: flex;
 }
+body.dark .navbar-section .navbar-container {
+  background-color: #37383C;
+}
 .navbar-section .navbar-container .home-img-container {
   margin: 29px 0px 17px 22px;
   width: 80%;
@@ -46,6 +49,9 @@ body.dark .navbar-section .blue-bar {
 .navbar-section .navbar-container .home-img-container .home-img {
   height: 49px;
   width: 56px;
+}
+body.dark .navbar-section .navbar-container .home-img-container .home-img #home-GIFOS-logo {
+  content: url("../../assets/logo-mobile-modo-noct.svg");
 }
 .navbar-section .navbar-container .menu-container {
   display: flex;
@@ -77,11 +83,17 @@ body.dark .navbar-section .blue-bar {
 .navbar-section .navbar-container .menu-container .label-menu .menu-checker .btn-burguer {
   width: 100%;
 }
+body.dark .navbar-section .navbar-container .menu-container .label-menu .menu-checker .btn-burguer {
+  content: url(../../assets/burger-modo-noct.svg);
+}
 .navbar-section .navbar-container .menu-container .label-menu .menu-checker .btn-burguerClose {
   display: none;
   height: 30px;
   margin-top: -8px;
   margin-left: -8px;
+}
+body.dark .navbar-section .navbar-container .menu-container .label-menu .menu-checker .btn-burguerClose {
+  content: url(../../assets/close-modo-noct.svg);
 }
 .navbar-section .navbar-container .menu-container .input-container {
   display: none;
@@ -169,7 +181,7 @@ body.dark .navbar-section .blue-bar {
   margin-left: 10px;
 }
 .navbar-section .navbar-container .menu-container .list-menu-container {
-  z-index: 100;
+  z-index: 600;
   visibility: hidden;
   position: absolute;
   padding-top: 7px;
@@ -178,6 +190,9 @@ body.dark .navbar-section .blue-bar {
   width: 100%;
   height: 100%;
   background-color: rgba(87, 46, 229, 0.9);
+}
+body.dark .navbar-section .navbar-container .menu-container .list-menu-container {
+  background-color: #000000;
 }
 .navbar-section .navbar-container .menu-container .list-menu-container .list-menu li {
   margin: 30px auto;
@@ -201,6 +216,9 @@ body.dark .navbar-section .blue-bar {
 }
 .navbar-section .navbar-container .menu-container .list-menu-container .list-menu li .link-menu span:hover {
   border-bottom: 2px solid #50E3C2;
+}
+body.dark .navbar-section .navbar-container .menu-container .list-menu-container .list-menu li .link-menu span:hover {
+  border-bottom: 2px solid #FFFFFF;
 }
 .navbar-section .navbar-container .menu-container .list-menu-container .link-menu::after {
   content: "";
@@ -248,7 +266,7 @@ body.dark .navbar-section .blue-bar {
     display: none;
   }
   .navbar-section .navbar-container .menu-container .list-menu-container {
-    z-index: 100;
+    z-index: 600;
     visibility: visible;
     position: relative;
     padding-top: 7px;
@@ -258,10 +276,16 @@ body.dark .navbar-section .blue-bar {
     height: 100%;
     background-color: #FFFFFF;
   }
+  body.dark .navbar-section .navbar-container .menu-container .list-menu-container {
+    background-color: #37383C;
+  }
   .navbar-section .navbar-container .menu-container .list-menu-container .list-menu {
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
+  }
+  body.dark .navbar-section .navbar-container .menu-container .list-menu-container .list-menu {
+    background-color: #37383C;
   }
   .navbar-section .navbar-container .menu-container .list-menu-container .list-menu li {
     margin: 30px;
@@ -280,6 +304,13 @@ body.dark .navbar-section .blue-bar {
   .navbar-section .navbar-container .menu-container .list-menu-container .list-menu li .link-menu span:hover {
     border-bottom: 2px solid #5ED7C6;
   }
+  body.dark .navbar-section .navbar-container .menu-container .list-menu-container .list-menu li .link-menu span {
+    color: #FFFFFF;
+    border-bottom: 2px solid #37383C;
+  }
+  body.dark .navbar-section .navbar-container .menu-container .list-menu-container .list-menu li .link-menu span:hover {
+    border-bottom: 2px solid #FFFFFF;
+  }
   .navbar-section .navbar-container .menu-container .list-menu-container .list-menu li .link-menu #crear-gif-link {
     display: none;
   }
@@ -287,11 +318,20 @@ body.dark .navbar-section .blue-bar {
     display: inline;
     margin: -15px 40px -15px -15px;
   }
+  body.dark .navbar-section .navbar-container .menu-container .list-menu-container .list-menu li .link-menu #crear-gif-img {
+    content: url("../../assets/CTA-crear-gifo-modo-noc.svg");
+  }
   .navbar-section .navbar-container .menu-container .list-menu-container .list-menu li .link-menu #crear-gif-img:hover {
     content: url("../../assets/CTA-crear-gifo-hover.svg");
   }
+  body.dark .navbar-section .navbar-container .menu-container .list-menu-container .list-menu li .link-menu #crear-gif-img:hover {
+    content: url("../../assets/CTA-crear-gifo-hover-modo-noc.svg");
+  }
   .navbar-section .navbar-container .menu-container .list-menu-container .list-menu li .link-menu #crear-gif-img:active {
     content: url("../../assets/CTA-crear-gifo-active.svg");
+  }
+  body.dark .navbar-section .navbar-container .menu-container .list-menu-container .list-menu li .link-menu #crear-gif-img:active {
+    content: url("../../assets/CTA-crear-gifo-active-modo-noc.svg");
   }
   .navbar-section .navbar-container .menu-container .list-menu-container .link-menu::after {
     content: "";
@@ -302,8 +342,14 @@ body.dark .navbar-section .blue-bar {
     margin-top: 35px;
     left: calc(50% - 20.5px);
   }
+  body.dark .navbar-section .navbar-container .menu-container .list-menu-container .link-menu::after {
+    background-color: #37383C;
+  }
   .navbar-section .navbar-container .menu-container .list-menu-container .link-menu:hover span {
     border-bottom: 2px solid #9CAFC3;
+  }
+  body.dark .navbar-section .navbar-container .menu-container .list-menu-container .link-menu:hover span {
+    border-bottom: 2px solid #37383C;
   }
   .navbar-section .navbar-container .menu-container .list-menu-container .link-menu:active {
     color: #9CAFC3;
@@ -429,7 +475,7 @@ body.dark .navbar-section .blue-bar {
     margin-left: 10px;
   }
   .navbar-section .navbar-container .menu-container .list-menu-container {
-    z-index: 100;
+    z-index: 600;
     visibility: visible;
     position: relative;
     padding-top: 7px;

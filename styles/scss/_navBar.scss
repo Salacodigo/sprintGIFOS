@@ -17,6 +17,10 @@
 
    .navbar-container{
       display: flex;
+
+      body.dark & {
+         background-color: $dark-background;
+       }
       
       .home-img-container{
          margin: 29px 0px 17px 22px;
@@ -25,6 +29,11 @@
          .home-img{
             height: 49px;
             width: 56px;
+            #home-GIFOS-logo{
+               body.dark & {
+                  content: url('../../assets/logo-mobile-modo-noct.svg');   
+               }
+            }
             
          }
       }
@@ -68,14 +77,19 @@
                
                .btn-burguer{
                   width: 100%;
+                  body.dark & {
+                     content: url(../../assets/burger-modo-noct.svg);
+                  }
                   
                }
                .btn-burguerClose{
                   display: none;
-                height: 30px;
-                margin-top: -8px;
-                margin-left: -8px;
-                  
+                  height: 30px;
+                  margin-top: -8px;
+                  margin-left: -8px;
+                  body.dark & {
+                     content: url(../../assets/close-modo-noct.svg);
+                   }  
                 
               }
             }
@@ -183,7 +197,7 @@
 
 
          .list-menu-container{
-            z-index: 100;
+            z-index: 600;
             visibility: hidden;
             position: absolute;
             padding-top: 7px;
@@ -192,7 +206,9 @@
             width: 100%;
             height: 100%;
             background-color: $menu-purple;
-            
+            body.dark & {
+               background-color: $black-gifos;
+             }
 
             .list-menu{
                   
@@ -219,11 +235,14 @@
                         display: inline-block;
                         padding-bottom: 1px ;
                         border-bottom: 2px solid $menu-purple-transparent;
-                        
-                       
 
                         &:hover{
                            border-bottom: 2px solid $green-gifos;
+                        }
+                        body.dark & {
+                           &:hover{
+                             border-bottom: 2px solid $white-gifos; 
+                           }
                         }
                         
                      }
@@ -297,7 +316,7 @@
    
             
             .list-menu-container{
-               z-index: 100;
+               z-index: 600;
                visibility: visible;
                position: relative;
                padding-top: 7px;
@@ -306,13 +325,19 @@
                width: 100%;
                height: 100%;
                background-color: $white-gifos;
+               body.dark & {
+                  background-color: $dark-background;
+               }
                
                
                .list-menu{
                   display: flex;
                   flex-direction: row;
                   justify-content: flex-end;
-               
+                  body.dark & {
+                     background-color: $dark-background;
+                  }
+                  
                   
                   li{
                      margin: 30px;
@@ -330,11 +355,18 @@
                            text-transform: uppercase;
                            padding-bottom: 1px ;
                            border-bottom: 2px solid $white-gifos;
-               
+                           
                            &:hover{
                               border-bottom: 2px solid $green-gifos-bar;
                            }
-                           
+                           body.dark & {
+                              color: $white-gifos;
+                              border-bottom: 2px solid $dark-background;
+
+                              &:hover{
+                                border-bottom: 2px solid $white-gifos; 
+                              }
+                           }
                         }
 
                         #crear-gif-link{
@@ -343,11 +375,21 @@
                         #crear-gif-img{
                            display:inline;
                            margin: -15px 40px -15px -15px;
+                           body.dark & {
+                              content: url('../../assets/CTA-crear-gifo-modo-noc.svg');
+                           }
                            &:hover {
-                              content: url('../../assets/CTA-crear-gifo-hover.svg')
+                              content: url('../../assets/CTA-crear-gifo-hover.svg');
+                              
+                              body.dark & {
+                                 content: url('../../assets/CTA-crear-gifo-hover-modo-noc.svg');
+                              }
                            }
                            &:active {
-                              content: url('../../assets/CTA-crear-gifo-active.svg')
+                              content: url('../../assets/CTA-crear-gifo-active.svg');
+                              body.dark & {
+                                 content: url('../../assets/CTA-crear-gifo-active-modo-noc.svg');
+                              }
                            }
                         }
                      }
@@ -356,19 +398,27 @@
                
        
                .link-menu::after{
-                 content: '';
-                 position: absolute;
-                 background-color: $white-gifos-transparent;
-                 width: 41px;
-                 height: 0.1px;
-                 margin-top: 35px;
-                 left: calc(50% - 20.5px);
+                  content: '';
+                  position: absolute;
+                  background-color: $white-gifos-transparent;
+                  width: 41px;
+                  height: 0.1px;
+                  margin-top: 35px;
+                  left: calc(50% - 20.5px);
+                  body.dark & { 
+                     background-color: $dark-background;
+                  }
                }
        
                .link-menu:hover{
+
                  span{
-                   border-bottom: 2px solid $division-bar;
+                     border-bottom: 2px solid $division-bar;
+                     body.dark & { 
+                        border-bottom: 2px solid $dark-background;
+                     }
                  }
+                 
                }
        
                .link-menu:active{
@@ -522,7 +572,7 @@
             }
             
             .list-menu-container{
-               z-index: 100;
+               z-index: 600;
                visibility: visible;
                position: relative;
                padding-top: 7px;
