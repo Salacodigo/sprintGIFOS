@@ -91,6 +91,7 @@ function cambioPantalla4(){
 }
 //GIFO subido con exito
 function cambioPantalla5(){
+   screen.style.display = "none";
    screenStep4.style.display = "none";
    screenStep5.style.display = "flex";
 }

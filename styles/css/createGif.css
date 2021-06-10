@@ -26,7 +26,7 @@ body.dark {
 
 .navbar-section {
   background-color: #FFFFFF;
-  z-index: 100;
+  z-index: 500;
 }
 .navbar-section .blue-bar {
   width: 100%;
@@ -541,6 +541,9 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   display: flex;
   flex-direction: column;
 }
+body.dark .createGif-section {
+  background-color: #37383C;
+}
 .createGif-section .camera-container {
   position: relative;
   align-self: center;
@@ -550,15 +553,40 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
 }
 .createGif-section .camera-container #camera-img {
   position: absolute;
-  top: 0px;
+  top: 20px;
   left: unset;
   right: unset;
   width: 86px;
   height: auto;
 }
+body.dark .createGif-section .camera-container #camera-img {
+  content: url("../../assets/element-camara.svg");
+}
+.createGif-section .camera-container #camera-film1 {
+  position: absolute;
+  top: -10px;
+  left: 0%;
+  right: unset;
+  width: 36px;
+  height: auto;
+}
+body.dark .createGif-section .camera-container #camera-film1 {
+  content: url("../../assets/element_cinta1-modo-noc.svg");
+}
+.createGif-section .camera-container #camera-film2 {
+  position: absolute;
+  top: -20px;
+  left: 48%;
+  right: unset;
+  width: 46px;
+  height: auto;
+}
+body.dark .createGif-section .camera-container #camera-film2 {
+  content: url("../../assets/element_cinta2-modo-noc.svg");
+}
 .createGif-section .camera-container #camera-light {
   position: absolute;
-  top: 18px;
+  top: 0px;
   left: 86px;
   right: unset;
   height: 80px;
@@ -582,6 +610,10 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   text-align: center;
   position: relative;
 }
+body.dark .createGif-section .screen-container .screen {
+  border: 1px solid #50E3C2;
+  background-color: unset;
+}
 .createGif-section .screen-container .screen .title {
   color: #572EE5;
   font-size: 25px;
@@ -602,6 +634,9 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   width: 230px;
   font-family: "Roboto";
   margin: 0px auto;
+}
+body.dark .createGif-section .screen-container .screen p {
+  color: #FFFFFF;
 }
 .createGif-section .screen-container .corners {
   display: flex;
@@ -660,9 +695,18 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
 .createGif-section .screen-container .scStep1 {
   display: flex;
 }
+body.dark .createGif-section .screen-container .scStep1 {
+  background-color: #37383C;
+}
+body.dark .createGif-section .screen-container .scStep2 {
+  background-color: #37383C;
+}
 .createGif-section .screen-container .scStep3 {
   justify-content: center;
   align-items: center;
+}
+body.dark .createGif-section .screen-container .scStep3 {
+  background-color: #37383C;
 }
 .createGif-section .screen-container .scStep3 video {
   width: 100%;
@@ -707,6 +751,7 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   left: unset;
   right: 10px;
   top: 12px;
+  z-index: 300;
 }
 .createGif-section .screen-container .scStep4 .btnContainerStep5 .downloadBtn, .createGif-section .screen-container .scStep4 .btnContainerStep5 .linkBtn, .createGif-section .screen-container .scStep5 .btnContainerStep5 .downloadBtn, .createGif-section .screen-container .scStep5 .btnContainerStep5 .linkBtn {
   cursor: pointer;
@@ -728,14 +773,32 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
 .createGif-section .screen-container .steps-container .step {
   margin: 5px;
 }
+body.dark .createGif-section .screen-container .steps-container .stepOne {
+  content: url("../../assets/paso-a-paso-mod-noc.svg");
+}
+body.dark .createGif-section .screen-container .steps-container .stepTwo {
+  content: url("../../assets/paso-a-paso-mod-noc2.svg");
+}
+body.dark .createGif-section .screen-container .steps-container .stepThree {
+  content: url("../../assets/paso-a-paso-mod-noc3.svg");
+}
 .createGif-section .screen-container .steps-container.one .stepOne {
   content: url("../../assets/paso-a-paso-hover.svg");
+}
+body.dark .createGif-section .screen-container .steps-container.one .stepOne {
+  content: url("../../assets/paso-a-paso-hover-mod-noc.svg");
 }
 .createGif-section .screen-container .steps-container.two .stepTwo {
   content: url("../../assets/paso-a-paso-hover2.svg");
 }
+body.dark .createGif-section .screen-container .steps-container.two .stepTwo {
+  content: url("../../assets/paso-a-paso-hover-mod-noc2.svg");
+}
 .createGif-section .screen-container .steps-container.three .stepThree {
   content: url("../../assets/paso-a-paso-hover3.svg");
+}
+body.dark .createGif-section .screen-container .steps-container.three .stepThree {
+  content: url("../../assets/paso-a-paso-hover-mod-noc3.svg");
 }
 .createGif-section .screen-container .steps-container .clock {
   display: none;
@@ -752,6 +815,9 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   margin: 10px;
   align-items: center;
 }
+body.dark .createGif-section .screen-container .steps-container .crono {
+  color: #50E3C2;
+}
 .createGif-section .screen-container .steps-container .repeat {
   display: none;
   color: #572EE5;
@@ -767,10 +833,20 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   border-bottom: 3px solid #572EE5;
   cursor: pointer;
 }
+body.dark .createGif-section .screen-container .steps-container .repeat {
+  color: #50E3C2;
+}
+body.dark .createGif-section .screen-container .steps-container .repeat:hover {
+  border-bottom: 3px solid #50E3C2;
+  cursor: pointer;
+}
 .createGif-section .screen-container .menu-bar {
   width: 100%;
   height: 5px;
   background-color: #572EE5;
+}
+body.dark .createGif-section .screen-container .menu-bar {
+  background-color: #50E3C2;
 }
 .createGif-section .screen-container .button-container {
   display: flex;
@@ -787,14 +863,38 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
 .createGif-section .screen-container .button-container .startBtn:hover {
   content: url("../../assets/CTA-comenzar-hover.svg");
 }
+body.dark .createGif-section .screen-container .button-container .startBtn {
+  content: url("../../assets/CTA-comenzar-modo-noc.svg");
+}
+body.dark .createGif-section .screen-container .button-container .startBtn:hover {
+  content: url("../../assets/CTA-comenzar+-modo-noc.svg");
+}
 .createGif-section .screen-container .button-container .recordBtn:hover {
   content: url("../../assets/CTA-record-hover.svg");
+}
+body.dark .createGif-section .screen-container .button-container .recordBtn {
+  content: url("../../assets/CTA-record-modo-noc.svg");
+}
+body.dark .createGif-section .screen-container .button-container .recordBtn:hover {
+  content: url("../../assets/CTA-record+-modo-noc.svg");
 }
 .createGif-section .screen-container .button-container .finishBtn:hover {
   content: url("../../assets/CTA-finalizar-hover.svg");
 }
+body.dark .createGif-section .screen-container .button-container .finishBtn {
+  content: url("../../assets/CTA-finalizar-modo-noc.svg");
+}
+body.dark .createGif-section .screen-container .button-container .finishBtn:hover {
+  content: url("../../assets/CTA-finalizar+-modo-noc.svg");
+}
 .createGif-section .screen-container .button-container .uploadBtn:hover {
   content: url("../../assets/CTA-upload-hover.svg");
+}
+body.dark .createGif-section .screen-container .button-container .uploadBtn {
+  content: url("../../assets/CTA-upload-modo-noc.svg");
+}
+body.dark .createGif-section .screen-container .button-container .uploadBtn:hover {
+  content: url("../../assets/CTA-upload+-modo-noc.svg");
 }
 .createGif-section .tape-container {
   align-self: center;
@@ -804,6 +904,9 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
 .createGif-section .tape-container img {
   width: 100%;
   height: 100%;
+}
+body.dark .createGif-section .tape-container img {
+  content: url("../../assets/pelicula-modo-noc.svg");
 }
 
 @media (min-width: 1440px) {
@@ -822,11 +925,36 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   }
   .createGif-section .camera-container #camera-img {
     position: absolute;
-    top: 119px;
+    top: 170px;
     left: unset;
     right: 91px;
     width: 116px;
     height: auto;
+  }
+  body.dark .createGif-section .camera-container #camera-img {
+    content: url("../../assets/element-camara.svg");
+  }
+  .createGif-section .camera-container #camera-film1 {
+    position: absolute;
+    top: 111px;
+    left: unset;
+    right: 91px;
+    width: 65px;
+    height: auto;
+  }
+  body.dark .createGif-section .camera-container #camera-film1 {
+    content: url("../../assets/element_cinta1-modo-noc.svg");
+  }
+  .createGif-section .camera-container #camera-film2 {
+    position: absolute;
+    top: 129px;
+    left: unset;
+    right: 160px;
+    width: 48px;
+    height: auto;
+  }
+  body.dark .createGif-section .camera-container #camera-film2 {
+    content: url("../../assets/element_cinta2-modo-noc.svg");
   }
   .createGif-section .camera-container #camera-light {
     position: absolute;

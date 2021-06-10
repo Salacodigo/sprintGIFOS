@@ -30,7 +30,7 @@ body.dark {
 
 .navbar-section {
   background-color: #FFFFFF;
-  z-index: 100;
+  z-index: 500;
 }
 .navbar-section .blue-bar {
   width: 100%;

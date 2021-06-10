@@ -3,6 +3,9 @@
 .createGif-section{
    display: flex;
    flex-direction: column;
+   body.dark & {
+      background-color: $dark-background;
+   }
 
    .camera-container{
       position: relative;
@@ -13,18 +16,43 @@
       
       #camera-img{
          position: absolute;
-         top: 0px;
+         top: 20px;
          left: unset;
          right: unset;
          width: 86px;
          height: auto;
-         
+         body.dark & {
+            content: url('../../assets/element-camara.svg');
+         }
+      }
 
+      #camera-film1{
+         position: absolute;
+         top: -10px;
+         left: 0%;
+         right: unset;
+         width: 36px;
+         height: auto;
+         body.dark & {
+            content: url('../../assets/element_cinta1-modo-noc.svg');
+         }
+      }
+
+      #camera-film2{
+         position: absolute;
+         top: -20px;
+         left: 48%;
+         right: unset;
+         width: 46px;
+         height: auto;
+         body.dark & {
+            content: url('../../assets/element_cinta2-modo-noc.svg');
+         }
       }
 
       #camera-light{
          position: absolute;
-         top: 18px;
+         top: 0px;
          left: 86px;
          right: unset;
          height: 80px;
@@ -51,6 +79,10 @@
          text-align: center;
          position: relative;
 
+         body.dark &{
+            border: 1px solid $green-gifos;
+            background-color: unset;
+         }
 
 
          .title{
@@ -74,7 +106,9 @@
             width: 230px;
             font-family: $font-regular;
             margin: 0px auto;
-            
+            body.dark & {
+               color: $white-gifos;
+            }
           }
       }
 
@@ -135,20 +169,28 @@
               transform: rotate(180deg);
             }
     
-          }
+         }
       }
 
       .scStep1{
          display: flex;
+         body.dark & {
+            background-color: $dark-background;
+         }
       }
 
       .scStep2{
-         
+         body.dark & {
+            background-color: $dark-background;
+         }
       }
 
       .scStep3{
          justify-content:center;
          align-items: center;
+         body.dark & {
+            background-color: $dark-background;
+         }
          video {
             width: 100%;
             max-width: 480px;
@@ -195,7 +237,8 @@
             left: unset;
             right: 10px;
             top: 12px;
-   
+            z-index: 300;
+
             .downloadBtn, .linkBtn{
                cursor: pointer;
                width: 32px;
@@ -226,33 +269,47 @@
          }
 
          .stepOne{
-
-            
+            body.dark & {
+               content: url('../../assets/paso-a-paso-mod-noc.svg');
+            }
          }
          
          .stepTwo{
-
+            body.dark & {
+               content: url('../../assets/paso-a-paso-mod-noc2.svg');
+            }
          }
 
          .stepThree{
-
+            body.dark & {
+               content: url('../../assets/paso-a-paso-mod-noc3.svg');
+            }
          }
 
          &.one {
             .stepOne{
                content: url('../../assets/paso-a-paso-hover.svg');
+               body.dark & {
+                  content: url('../../assets/paso-a-paso-hover-mod-noc.svg');
+               }
             }
          }
 
          &.two {
             .stepTwo{
                content: url('../../assets/paso-a-paso-hover2.svg');
+               body.dark & {
+                  content: url('../../assets/paso-a-paso-hover-mod-noc2.svg');
+               }
             }
          }
-
+            
          &.three {
             .stepThree{
                content: url('../../assets/paso-a-paso-hover3.svg');
+               body.dark & {
+                  content: url('../../assets/paso-a-paso-hover-mod-noc3.svg');
+               }
             }
          }
 
@@ -274,6 +331,9 @@
             font-family: $font-bold;
             margin: 10px;
             align-items: center;
+            body.dark & {
+               color: $green-gifos;
+            }
     
          }
          .repeat{
@@ -291,6 +351,14 @@
                border-bottom: 3px solid $purple-gifos;
                cursor: pointer;
             }
+            body.dark & {
+               color: $green-gifos;
+     
+               &:hover{
+                 border-bottom: 3px solid $green-gifos;
+                 cursor: pointer;
+               }
+            }
          }
          
       }
@@ -299,7 +367,9 @@
          width: 100%;
          height: 5px;
          background-color: $purple-gifos;
-         
+         body.dark &{
+            background-color: $green-gifos; 
+         }
        }
 
       .button-container{
@@ -309,8 +379,7 @@
          justify-content: center;
 
          .createBtn{
-            display: none;
-            
+            display: none; 
          }
 
          .startBtn{
@@ -318,11 +387,28 @@
             &:hover{
                content: url('../../assets/CTA-comenzar-hover.svg')
             }
+            body.dark &{
+               content: url('../../assets/CTA-comenzar-modo-noc.svg');
+     
+               &:hover{
+                 content: url('../../assets/CTA-comenzar+-modo-noc.svg');
+               }
+               
+            }
          }
 
          .recordBtn{
             &:hover{
                content: url('../../assets/CTA-record-hover.svg')
+            }
+
+            body.dark &{
+               content: url('../../assets/CTA-record-modo-noc.svg');
+     
+               &:hover{
+                 content: url('../../assets/CTA-record+-modo-noc.svg');
+               }
+               
             }
          }
    
@@ -330,11 +416,27 @@
             &:hover{
                content: url('../../assets/CTA-finalizar-hover.svg')
             }
+            body.dark &{
+               content: url('../../assets/CTA-finalizar-modo-noc.svg');
+     
+               &:hover{
+                 content: url('../../assets/CTA-finalizar+-modo-noc.svg');
+               }
+               
+            }
          }
 
          .uploadBtn{
             &:hover{
                content: url('../../assets/CTA-upload-hover.svg')
+            }
+            body.dark &{
+               content: url('../../assets/CTA-upload-modo-noc.svg');
+     
+               &:hover{
+                 content: url('../../assets/CTA-upload+-modo-noc.svg');
+               }
+               
             }
          }
 
@@ -354,6 +456,9 @@
       img{
          width: 100%;
          height: 100%;
+         body.dark & {
+            content: url('../../assets/pelicula-modo-noc.svg')
+         }
       }
    }
 
@@ -372,16 +477,42 @@
          min-width: 376px;
          height: 100%;
          position: relative;
-         
-         
          #camera-img{
             position: absolute;
-            top: 119px;
+            top: 170px;
             left: unset;
             right: 91px;
             width: 116px;
             height: auto;
+            body.dark & {
+               content: url('../../assets/element-camara.svg');
+            }
          }
+   
+         #camera-film1{
+            position: absolute;
+            top: 111px;
+            left: unset;
+            right: 91px;
+            width: 65px;
+            height: auto;
+            body.dark & {
+               content: url('../../assets/element_cinta1-modo-noc.svg');
+            }
+         }
+   
+         #camera-film2{
+            position: absolute;
+            top: 129px;
+            left: unset;
+            right: 160px;
+            width: 48px;
+            height: auto;
+            body.dark & {
+               content: url('../../assets/element_cinta2-modo-noc.svg');
+            }
+         }
+      
 
          #camera-light{
             position: absolute;
