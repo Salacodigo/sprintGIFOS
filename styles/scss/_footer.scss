@@ -10,7 +10,10 @@
   border-bottom: 1px solid $purple-gifos;
   display: flexbox;
   background-color: $white-gifos;
-  
+  body.dark & {
+    border: 1px solid $dark-background;
+    background-color: $dark-background;
+  }
 
 
   .title{
@@ -24,7 +27,9 @@
       font-family: $font-regular;
       font-size: 16px;
       color: $black-gifos;
-      
+      body.dark & {
+        color: $white-gifos;
+      }
     }
   }
 
@@ -38,28 +43,31 @@
     .social-icon{
       width: 18px;
       height: 18px;
-    }
-    .facebook{
-      content: url('../../assets/icon_facebook.svg');
       cursor: pointer;
     }
+    
     .facebook:hover{
       content: url('../../assets/icon_facebook_hover.svg');
     }
-    
-    .twitter{
-      content: url('../../assets/icon-twitter.svg');
-      cursor: pointer;
-    }
+  
     .twitter:hover{
       content: url('../../assets/icon-twitter-hover.svg');
     }
-    .instagram{
-      content: url('../../assets/icon_instagram.svg');
-      cursor: pointer;
-    }
+  
     .instagram:hover{
       content: url('../../assets/icon_instagram-hover.svg');
+    }
+
+    body.dark & {
+      .facebook:hover{
+        content: url('../../assets/icon_facebook_noc.svg');
+      }
+      .twitter:hover{
+        content: url('../../assets/icon_twitter_noc.svg');
+      }
+      .instagram:hover{
+        content: url('../../assets/icon_instagram_noc.svg');
+      } 
     }
     
 
@@ -72,14 +80,18 @@
     font-family: $font-regular;
     font-size: 14px;
     line-height: 20px;
-    
+    body.dark & {
+      color: $white-gifos;
+    }
   }
 
   .menu-bar{
     width: 100%;
     height: 5px;
     background-color: $purple-gifos;
-    
+    body.dark & {
+      background-color: $black-gifos;
+    }
   }
 }
 /* 
