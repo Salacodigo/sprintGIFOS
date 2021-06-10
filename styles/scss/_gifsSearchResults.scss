@@ -1,11 +1,11 @@
 @import 'variables';
 
 .gif-search-results{
-   border: 1px solid $white-gifos;
    display: flex;
    flex-direction: column;
-   background-color: $white-gifos;
    justify-content: center;
+   border: 1px solid $white-gifos;
+   background-color: $white-gifos;
    body.dark & {
       background-color: $dark-background;
       border: 1px solid $dark-background;
@@ -111,22 +111,18 @@
                   &:hover{
                      content: url('../../assets/icon-fav-hover.svg')
                   }                  
-
                }
                
                .downloadBtn{
                   &:hover{
                      content: url('../../assets/icon-download-hover.svg')
                   }
-                  
                }
                
                .expandBtn{
                   &:hover{
                      content: url('../../assets/icon-max-hover.svg')
                   }
-                  
-                  
                }
             }
    
@@ -258,6 +254,7 @@
          }
          
          .hoverGif{
+            display: none;
             position: absolute;
             background-color: $hoverColor;
             width: 100%;
@@ -297,8 +294,6 @@
                   &:hover{
                      content: url('../../assets/icon-max-hover.svg')
                   }
-                  
-                  
                }
             }
    

@@ -58,6 +58,9 @@ body.dark .navbar-section .navbar-container {
   height: 49px;
   width: 56px;
 }
+.navbar-section .navbar-container .home-img-container .home-img #home-GIFOS-logo {
+  font-family: "Montserrat";
+}
 body.dark .navbar-section .navbar-container .home-img-container .home-img #home-GIFOS-logo {
   content: url("../../assets/logo-mobile-modo-noct.svg");
 }
@@ -263,6 +266,9 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   }
   .navbar-section .navbar-container .home-img-container .home-img #home-GIFOS-logo {
     content: url("../../assets/logo-desktop.svg");
+  }
+  body.dark .navbar-section .navbar-container .home-img-container .home-img #home-GIFOS-logo {
+    content: url("../../assets/Logo-modo-noc.svg");
   }
   .navbar-section .navbar-container .menu-container {
     display: flex;
@@ -553,7 +559,7 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 200;
+  z-index: 1000;
   background-color: #FFFFFF;
 }
 body.dark .maximize-container {
@@ -1343,11 +1349,11 @@ body.dark .search-section .terms-container a span {
 }
 
 .gif-search-results {
-  border: 1px solid #FFFFFF;
   display: flex;
   flex-direction: column;
-  background-color: #FFFFFF;
   justify-content: center;
+  border: 1px solid #FFFFFF;
+  background-color: #FFFFFF;
 }
 body.dark .gif-search-results {
   background-color: #37383C;
@@ -1551,6 +1557,7 @@ body.dark .gif-search-results .btn-VerMas img:hover {
     height: 100%;
   }
   .gif-search-results .gif-container .gif-card .hoverGif {
+    display: none;
     position: absolute;
     background-color: rgba(87, 46, 229, 0.7);
     width: 100%;
@@ -1734,11 +1741,11 @@ body.dark .gif-search-results .btn-VerMas img:hover {
   }
 }
 .trending-carrousel {
-  background-color: #F3F5F8;
-  padding-bottom: 82px;
-  width: 100%;
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding-bottom: 82px;
+  background-color: #F3F5F8;
 }
 body.dark .trending-carrousel {
   background-color: #222326;
@@ -1825,13 +1832,14 @@ body.dark .trending-carrousel .carrousel-container .static-container #control-ri
   display: none;
 }
 .trending-carrousel .carrousel-container .static-container .gif-container .gif-card {
+  position: relative;
   display: flex;
   justify-content: center;
+  margin: 0px 22px 0px 0px;
   width: 257px;
   min-width: 257px;
-  margin: 0px 22px 0px 0px;
   height: 185px;
-  cursor: pointer;
+  cursor: default;
 }
 .trending-carrousel .carrousel-container .static-container .gif-container .gif-card .gifImage {
   background-color: #FFFFFF;
@@ -1870,7 +1878,7 @@ body.dark .trending-carrousel .carrousel-container .static-container .gif-contai
   content: url("../../assets/icon-max-hover.svg");
 }
 .trending-carrousel .carrousel-container .static-container .gif-container .gif-card .hoverGif .gifInformation {
-  margin-top: 60px;
+  margin: 60px 0px 0px 15px;
 }
 .trending-carrousel .carrousel-container .static-container .gif-container .gif-card .hoverGif .gifInformation .gifUser {
   margin: 5px 0px;
@@ -1954,12 +1962,16 @@ body.dark .trending-carrousel .carrousel-container .static-container .gif-contai
   }
   .trending-carrousel .carrousel-container .static-container .gif-container .gif-card {
     display: flex;
+    position: relative;
     justify-content: center;
     width: 300px;
     min-width: 300px;
     margin: 0px 22px 0px 0px;
     height: 220px;
     cursor: pointer;
+  }
+  .trending-carrousel .carrousel-container .static-container .gif-container .gif-card:hover .hoverGif {
+    display: flex;
   }
   .trending-carrousel .carrousel-container .static-container .gif-container .gif-card .gifImage {
     background-color: #FFFFFF;
@@ -1968,6 +1980,7 @@ body.dark .trending-carrousel .carrousel-container .static-container .gif-contai
   }
   .trending-carrousel .carrousel-container .static-container .gif-container .gif-card .hoverGif {
     display: none;
+    flex-direction: column;
     position: absolute;
     background-color: rgba(87, 46, 229, 0.7);
     width: 100%;
@@ -2084,7 +2097,8 @@ body.dark .trending-carrousel .carrousel-container .static-container .gif-contai
     min-width: 357px;
     margin: 0px 30px 0px 0px;
     height: 275px;
-    cursor: pointer;
+    position: relative;
+    cursor: default;
   }
   .trending-carrousel .carrousel-container .static-container .gif-container .gif-card .gifImage {
     background-color: #FFFFFF;
@@ -2092,7 +2106,6 @@ body.dark .trending-carrousel .carrousel-container .static-container .gif-contai
     height: 100%;
   }
   .trending-carrousel .carrousel-container .static-container .gif-container .gif-card .hoverGif {
-    display: none;
     position: absolute;
     background-color: rgba(87, 46, 229, 0.7);
     width: 100%;

@@ -1,11 +1,11 @@
 @import 'variables';
 
 .trending-carrousel{
-   background-color: $trending-background;
-   padding-bottom: 82px;
-   width: 100%;
    display: flex;
    flex-direction:column;
+   width: 100%;
+   padding-bottom: 82px;
+   background-color: $trending-background;
    body.dark & {
       background-color: $dark-background-trending;
    }
@@ -105,14 +105,16 @@
             }
          
             .gif-card{
+               position: relative;
                display: flex;
                justify-content: center;
+               margin: 0px 22px 0px 0px;
                width: 257px;
                min-width: 257px;
-               margin: 0px 22px 0px 0px;
                height: 185px;
-               cursor: pointer;
+               cursor: default;
                
+
                .gifImage{
                   background-color: $white-gifos;
                   width: 100%;
@@ -167,7 +169,7 @@
                   }
          
                   .gifInformation{
-                     margin-top: 60px;
+                     margin: 60px 0px 0px 15px;
          
                      .gifUser{
                         margin: 5px 0px;
@@ -275,12 +277,19 @@
             
                .gif-card{
                   display: flex;
+                  position: relative;
                   justify-content: center;
                   width: 300px;
                   min-width: 300px;
                   margin: 0px 22px 0px 0px;
                   height: 220px;
                   cursor: pointer;
+                  &:hover{
+            
+                     .hoverGif{
+                        display: flex;
+                     }
+                  }
                   
                   .gifImage{
                      background-color: $white-gifos;
@@ -290,6 +299,7 @@
                   
                   .hoverGif{
                      display: none;
+                     flex-direction: column;
                      position: absolute;
                      background-color: $hoverColor;
                      width: 100%;
@@ -447,7 +457,8 @@
                min-width: 357px;
                margin: 0px 30px 0px 0px;
                height: 275px;
-               cursor: pointer;
+               position: relative;
+               cursor: default;
                
                .gifImage{
                   background-color: $white-gifos;
@@ -456,7 +467,7 @@
                }
                
                .hoverGif{
-                  display: none;
+                  
                   position: absolute;
                   background-color: $hoverColor;
                   width: 100%;

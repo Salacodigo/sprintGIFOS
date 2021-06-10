@@ -1,8 +1,50 @@
 @import 'variables';
 
+@-moz-keyframes spin { 
+   100% { -moz-transform: rotate(360deg); } 
+}
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); } 
+}
+@keyframes spin {
+   100% {  -webkit-transform: rotate(360deg); 
+      transform:rotate(360deg); } 
+}
+
+@-moz-keyframes flash { 
+   1% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+@-webkit-keyframes flash {
+   1% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+@keyframes flash {
+   1% {
+      opacity: 0;
+   }
+
+   100% {
+      opacity: 1;
+   }
+}
+
+
+
 .createGif-section{
    display: flex;
    flex-direction: column;
+
    body.dark & {
       background-color: $dark-background;
    }
@@ -33,6 +75,10 @@
          right: unset;
          width: 36px;
          height: auto;
+         -webkit-animation:spin 6s linear infinite;
+         -moz-animation:spin 6s linear infinite;
+         animation:spin 6s linear infinite;
+
          body.dark & {
             content: url('../../assets/element_cinta1-modo-noc.svg');
          }
@@ -45,6 +91,9 @@
          right: unset;
          width: 46px;
          height: auto;
+         -webkit-animation:spin 4s linear infinite;
+         -moz-animation:spin 4s linear infinite;
+         animation:spin 4s linear infinite;
          body.dark & {
             content: url('../../assets/element_cinta2-modo-noc.svg');
          }
@@ -57,6 +106,7 @@
          right: unset;
          height: 80px;
          width: auto;
+         animation: flash .3s linear infinite;
       }
    }
 

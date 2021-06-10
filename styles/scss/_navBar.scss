@@ -30,6 +30,7 @@
             height: 49px;
             width: 56px;
             #home-GIFOS-logo{
+               font-family: $font-bold;
                body.dark & {
                   content: url('../../assets/logo-mobile-modo-noct.svg');   
                }
@@ -297,7 +298,11 @@
                width: 56px;
                
                #home-GIFOS-logo{
-                  content: url('../../assets/logo-desktop.svg')
+                  content: url('../../assets/logo-desktop.svg');
+                  
+                  body.dark & {
+                     content: url('../../assets/Logo-modo-noc.svg');   
+                  }
                }
             }
          }

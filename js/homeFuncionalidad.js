@@ -3,6 +3,8 @@ document.addEventListener("DOMContentLoaded", () => {
    load();
 });
 
+let wordSearched = ''; //Variable managing the word searched with VerMasBtn
+
 async function load() {
    await loadTrending();
    trendingTerms = document.querySelectorAll('.trending-term');
@@ -22,6 +24,7 @@ async function loadTrending() {
 
 //Realiza la busqueda de GIfs con base en una palabra
 async function buscaPorPalabra(word, verMas = false) {
+   wordSearched = word;
    ocultarSugerencias();
    limpiarContenedor(containerSearch);
    if (verMas == false) {
@@ -57,8 +60,9 @@ async function buscarBtnNav() {
 //Permite buscar gifs al darle clic a un trending term
 async function buscarTrendingTerm(e) {
    let word = e.target.dataset.word;
-
+   
    if (word != null || word != "" || word != undefined) {
+      wordSearched = word;
       buscaPorPalabra(word);
    }
 
@@ -143,8 +147,7 @@ function clearInputNav() {
 }
 
 async function verMas() {
-   let word = inputSearch.value;
-   buscaPorPalabra(word, true);
+   buscaPorPalabra(wordSearched, true);
 }
 
 //Muestra el loremContainer para decir que no hay resultados

@@ -50,6 +50,9 @@ body.dark .navbar-section .navbar-container {
   height: 49px;
   width: 56px;
 }
+.navbar-section .navbar-container .home-img-container .home-img #home-GIFOS-logo {
+  font-family: "Montserrat";
+}
 body.dark .navbar-section .navbar-container .home-img-container .home-img #home-GIFOS-logo {
   content: url("../../assets/logo-mobile-modo-noct.svg");
 }
@@ -255,6 +258,9 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   }
   .navbar-section .navbar-container .home-img-container .home-img #home-GIFOS-logo {
     content: url("../../assets/logo-desktop.svg");
+  }
+  body.dark .navbar-section .navbar-container .home-img-container .home-img #home-GIFOS-logo {
+    content: url("../../assets/Logo-modo-noc.svg");
   }
   .navbar-section .navbar-container .menu-container {
     display: flex;
@@ -537,6 +543,46 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
     text-decoration: none;
   }
 }
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes flash {
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes flash {
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes flash {
+  1% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .createGif-section {
   display: flex;
   flex-direction: column;
@@ -569,6 +615,9 @@ body.dark .createGif-section .camera-container #camera-img {
   right: unset;
   width: 36px;
   height: auto;
+  -webkit-animation: spin 6s linear infinite;
+  -moz-animation: spin 6s linear infinite;
+  animation: spin 6s linear infinite;
 }
 body.dark .createGif-section .camera-container #camera-film1 {
   content: url("../../assets/element_cinta1-modo-noc.svg");
@@ -580,6 +629,9 @@ body.dark .createGif-section .camera-container #camera-film1 {
   right: unset;
   width: 46px;
   height: auto;
+  -webkit-animation: spin 4s linear infinite;
+  -moz-animation: spin 4s linear infinite;
+  animation: spin 4s linear infinite;
 }
 body.dark .createGif-section .camera-container #camera-film2 {
   content: url("../../assets/element_cinta2-modo-noc.svg");
@@ -591,6 +643,7 @@ body.dark .createGif-section .camera-container #camera-film2 {
   right: unset;
   height: 80px;
   width: auto;
+  animation: flash 0.3s linear infinite;
 }
 .createGif-section .screen-container {
   display: flex;
