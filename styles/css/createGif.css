@@ -244,6 +244,7 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   .navbar-section {
     position: sticky;
     top: 0;
+    z-index: 500;
   }
   .navbar-section .navbar-container {
     display: flex;
