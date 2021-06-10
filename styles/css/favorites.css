@@ -552,6 +552,9 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   z-index: 200;
   background-color: #FFFFFF;
 }
+body.dark .maximize-container {
+  background-color: rgba(0, 0, 0, 0.9);
+}
 .maximize-container .closeBtn {
   cursor: pointer;
   position: absolute;
@@ -559,6 +562,9 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   top: 50px;
   left: unset;
   right: 20px;
+}
+body.dark .maximize-container .closeBtn {
+  content: url(../../assets/close-modo-noct.svg);
 }
 .maximize-container .previous-arrow, .maximize-container .next-arrow {
   display: none;
@@ -578,6 +584,9 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   object-fit: contain;
   background-color: rgba(255, 255, 255, 0.7);
 }
+body.dark .maximize-container .maximized-gif-card .gifImage {
+  background-color: rgba(0, 0, 0, 0.9);
+}
 .maximize-container .maximized-gif-card .gifDescription {
   position: relative;
   background-color: rgba(255, 255, 255, 0.7);
@@ -586,9 +595,15 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   height: 100%;
   display: flex;
 }
+body.dark .maximize-container .maximized-gif-card .gifDescription {
+  background-color: rgba(0, 0, 0, 0.9);
+}
 .maximize-container .maximized-gif-card .gifDescription .gifInformation {
   color: #000000;
   width: 60%;
+}
+body.dark .maximize-container .maximized-gif-card .gifDescription .gifInformation {
+  color: #FFFFFF;
 }
 .maximize-container .maximized-gif-card .gifDescription .gifInformation .gifUser {
   font-family: "Montserrat";
@@ -657,12 +672,24 @@ body.dark .navbar-section .navbar-container .menu-container .list-menu-container
   .maximize-container .previous-arrow:hover {
     content: url("../../assets/button-slider-left-hover.svg");
   }
+  body.dark .maximize-container .previous-arrow {
+    content: url(../../assets/button-slider-left-md-noct.svg);
+  }
+  body.dark .maximize-container .previous-arrow:hover {
+    content: url(../../assets/button-slider-left-hover-md-noct.svg);
+  }
   .maximize-container .next-arrow {
     left: unset;
     right: 35px;
   }
   .maximize-container .next-arrow:hover {
     content: url("../../assets/button-slider-right-hover.svg");
+  }
+  body.dark .maximize-container .next-arrow {
+    content: url(../../assets/button-slider-right-md-noct.svg);
+  }
+  body.dark .maximize-container .next-arrow:hover {
+    content: url(../../assets/button-slider-right-hover-md-noct.svg);
   }
   .maximize-container .maximized-gif-card {
     display: flex;

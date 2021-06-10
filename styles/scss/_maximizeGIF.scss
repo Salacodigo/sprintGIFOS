@@ -10,6 +10,9 @@
    height: 100%;
    z-index: 200;
    background-color: $white-gifos;
+   body.dark &{
+      background-color:  $black-gifos-transparent;
+   }
 
    .closeBtn{
       cursor: pointer;
@@ -18,6 +21,9 @@
       top: 50px;
       left: unset;
       right: 20px;
+      body.dark & {
+         content: url(../../assets/close-modo-noct.svg);
+      }
       
    }
 
@@ -40,6 +46,9 @@
          height: 245px;
          object-fit: contain;
          background-color: $hover-white;
+         body.dark &{
+            background-color:  $black-gifos-transparent;
+         }
          
       }
       
@@ -50,10 +59,16 @@
          width: 100%;
          height: 100%;
          display: flex;
-         
+         body.dark & {
+            background-color: $black-gifos-transparent;
+         }
+
          .gifInformation{
             color: $black-gifos;
             width: 60%;
+            body.dark & {
+               color: $white-gifos;
+            }
             
             .gifUser{
                font-family: $font-medium;
@@ -66,9 +81,6 @@
                font-family: $font-medium;
                margin: 0px 6px 6px 6px;
                font-size: 16px;
-               
-               
-   
             }
          }
          
@@ -88,12 +100,8 @@
             .downloadBtn{
                cursor: pointer;
                width: 36px;
-            
             }
-         
          }
-   
-
       }
    }
 }
@@ -143,6 +151,14 @@
          &:hover{
             content: url('../../assets/button-slider-left-hover.svg');
          }
+         body.dark & {
+            content: url(../../assets/button-slider-left-md-noct.svg);
+      
+            &:hover{
+              content: url(../../assets/button-slider-left-hover-md-noct.svg);
+            }
+            
+         }
       }
        
       .next-arrow{
@@ -150,6 +166,13 @@
          right: 35px;
          &:hover{
             content: url('../../assets/button-slider-right-hover.svg');
+         }
+         body.dark & {
+            content: url(../../assets/button-slider-right-md-noct.svg);
+      
+            &:hover{
+              content: url(../../assets/button-slider-right-hover-md-noct.svg);
+            }  
          }
       }
    
